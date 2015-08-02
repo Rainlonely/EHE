@@ -1,0 +1,13 @@
+{
+  "name": "M-Focus",
+  "version": "0.0.0",
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  },
+  "devDependencies": {
+    "bootstrap": "~3.3.4",
+    "jquery": "~2.1.4",
+    "fontawesome": "~4.4.0",
+    "jquery.easing": "~1.3.1"
+  }
+}
