@@ -55,8 +55,8 @@ module.exports = function (grunt) {
                     //target.css file: source.less file
                     ".tmp/styles/bootstrap.css": "<%= web.app %>/assets/less/bootstrap.less",
                     ".tmp/styles/variables.css": "<%= web.app %>/assets/less/variables.less",
-                    ".tmp/styles/fontawesome.css": "./bower_components/fontawesome/less/font-awesome.less"
-                    //".tmp/styles/global.css": "<%= web.app %>/assets/less/global.less"
+                    ".tmp/styles/fontawesome.css": "./bower_components/fontawesome/less/font-awesome.less",
+                    ".tmp/styles/index.css": "<%= web.app %>/assets/less/index.less"
                 }
             }
         },

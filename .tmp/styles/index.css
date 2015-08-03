@@ -1,0 +1,65 @@
+.sliderContainer {
+  width: 100%;
+  overflow: hidden;
+}
+.sliderContainer .slide {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.sliderContainer .slide .a-side {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../css/images/shadow.png);
+  background-position: 113% top;
+  background-size: 220px 100%;
+  background-repeat: no-repeat;
+}
+.sliderContainer .slide .b-side {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../css/images/shadow.png);
+  background-position: -13% top;
+  background-size: 220px 100%;
+  background-repeat: no-repeat;
+}
+nav {
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+}
+nav .container {
+  overflow: hidden;
+  width: 1200px;
+  margin: 0 auto;
+  height: 100px;
+}
+nav .container ul {
+  padding: 0;
+  margin: 0;
+}
+nav .container ul li {
+  list-style: none;
+  float: left;
+  width: 14%;
+  line-height: 100px;
+  color: #606060;
+}
+nav .container ul li:nth-child(1) {
+  color: #8a806d;
+}
+nav .container .change-lang a {
+  line-height: 100px;
+  color: #606060;
+  display: inline-block;
+}
