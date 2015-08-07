@@ -194,6 +194,18 @@ module.exports = function (grunt) {
                     },
                     {
                         expand: true,
+                        cwd: 'app/assets/js',
+                        src: ['jquery.slider.min.js'],
+                        dest: '<%= web.dist %>/resources/js'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'app/assets/css',
+                        src: ['jquery.slider.css'],
+                        dest: '<%= web.dist %>/resources/css'
+                    },
+                    {
+                        expand: true,
                         cwd: 'app/assets/css',
                         src: ['jquery.booklet.latest.css'],
                         dest: '<%= web.dist %>/resources/css'
@@ -209,7 +221,20 @@ module.exports = function (grunt) {
                         cwd: 'bower_components/jqueryui',
                         src: ['jquery-ui.min.js'],
                         dest: '<%= web.dist %>/resources/js'
+                    },
+                    {
+                        expand:true,
+                        cwd: 'bower_components/masonry/dist',
+                        src: ['masonry.pkgd.min.js'],
+                        dest: '<%= web.dist %>/resources/js'
+                    },
+                    {
+                        expand:true,
+                        cwd: 'bower_components/imagesloaded',
+                        src: ['imagesloaded.pkgd.min.js'],
+                        dest: '<%= web.dist %>/resources/js'
                     }
+
                 ]
             },
             // 拷贝html文件从源文件目录到build目录

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perspective Mockup Slideshow | Demo 2</title>
+    <meta name="description" content="A perspective slideshow based on Franklin Ta's CSS matrix3d transforms" />
+    <meta name="keywords" content="perspective, mockup, slideshow, transform, 3d, matrix, css" />
+    <meta name="author" content="Codrops" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/mockup2.css" /> -->
+    <style>
+    .wrap {
+        margin: 0 auto;
+        width: 100%;
+        height: 0;
+        padding-top: 58%;
+        /* ratio of image * 100 */
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .mockup {
+        position: absolute;
+        top: 0;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+    }
+    
+    .mockup::after {
+        content: '';
+        position: absolute;
+        background: rgba(51, 71, 89, 0.5);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+    
+    .mockup__img {
+        display: block;
+        width: 1900px;
+    }
+    
+    .screen {
+        position: absolute;
+        z-index: 100;
+        overflow: hidden;
+        background: #333;
+        width: 1280px;
+        height: 800px;
+        top: 52px;
+        left: 527px;
+        outline: 1px solid transparent;
+        -webkit-transform-origin: 0px 0px 0px;
+        transform-origin: 0px 0px 0px;
+        -webkit-transform: matrix3d(0.646130241234503, 0.00815882858721858, 0, 0.000003783820762478, -0.033901102438815, 0.560389135504825, 0, -0.000062320701669039, 0, 0, 1, 0, 220, 289, 0, 1);
+        transform: matrix3d(0.646130241234503, 0.00815882858721858, 0, 0.000003783820762478, -0.033901102438815, 0.560389135504825, 0, -0.000062320701669039, 0, 0, 1, 0, 220, 289, 0, 1);
+    }
+    
+    .slideshow {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        list-style-type: none;
+    }
+    
+    .slideshow__item {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 1;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+    
+    .slideshow__item.current {
+        pointer-events: auto;
+        z-index: 100;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    
+    .slideshow img {
+        width: 100%;
+    }
+    
+    .slideshow__item.in--next {
+        -webkit-animation: inNext 0.5s forwards;
+        animation: inNext 0.5s forwards;
+    }
+    
+    .slideshow__item.out--next {
+        -webkit-animation: outNext 0.5s forwards;
+        animation: outNext 0.5s forwards;
+    }
+    
+    .slideshow__item.in--prev {
+        -webkit-animation: inPrev 0.5s forwards;
+        animation: inPrev 0.5s forwards;
+    }
+    
+    .slideshow__item.out--prev {
+        -webkit-animation: outPrev 0.5s forwards;
+        animation: outPrev 0.5s forwards;
+    }
+    
+    @-webkit-keyframes inPrev {
+        0% {
+            -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+        }
+        100% {
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+    
+    @keyframes inPrev {
+        0% {
+            -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+        }
+        100% {
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+    
+    @-webkit-keyframes inNext {
+        0% {
+            -webkit-transform: scale3d(0.5, 0.5, 1);
+            transform: scale3d(0.5, 0.5, 1);
+        }
+        100% {
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+    
+    @keyframes inNext {
+        0% {
+            -webkit-transform: scale3d(0.5, 0.5, 1);
+            transform: scale3d(0.5, 0.5, 1);
+        }
+        100% {
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+    
+    @-webkit-keyframes outPrev {
+        100% {
+            -webkit-transform: scale3d(0.5, 0.5, 1);
+            transform: scale3d(0.5, 0.5, 1);
+        }
+    }
+    
+    @keyframes outPrev {
+        100% {
+            -webkit-transform: scale3d(0.5, 0.5, 1);
+            transform: scale3d(0.5, 0.5, 1);
+        }
+    }
+    
+    @-webkit-keyframes outNext {
+        100% {
+            -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+        }
+    }
+    
+    @keyframes outNext {
+        100% {
+            -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+        }
+    }
+    </style>
+</head>
+
+<body class="demo-2">
+    <div class="container">
+        <!-- Top Navigation -->
+        <!-- <div class="codrops-top clearfix">
+            <a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/DragDropInteractions/"><span>Previous Demo</span></a>
+            <span class="right"><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=21345"><span>Back to the Codrops Article</span></a>
+            </span>
+        </div> -->
+        <div id="wrap" class="wrap">
+            <div class="mockup">
+                <img class="mockup__img" src="../assets/images/mockup2.jpg" />
+                <div class="screen">
+                    <ul id="slideshow" class="slideshow">
+                        <li class="slideshow__item"><img src="../assets/images/2.png" /></li>
+                        <li class="slideshow__item"><img src="../assets/images/3.png" /></li>
+                        <li class="slideshow__item"><img src="../assets/images/4.png" /></li>
+                        <li class="slideshow__item"><img src="../assets/images/1.png" /></li>
+                    </ul>
+                </div>
+                <!-- <header class="codrops-header">
+                    <h1><span>Mockup</span> Slideshow <i>An animated perspective mockup with 3D transforms computed with <a href="http://franklinta.com/2014/09/08/computing-css-matrix3d-transforms/">Franklin Ta's helper script</a></i></h1>
+                </header> -->
+            </div>
+        </div>
+    </div>
+    <!-- /container -->
+    <script>
+    /*!
+     * classie - class helper functions
+     * from bonzo https://github.com/ded/bonzo
+     * 
+     * classie.has( elem, 'my-class' ) -> true/false
+     * classie.add( elem, 'my-new-class' )
+     * classie.remove( elem, 'my-unwanted-class' )
+     * classie.toggle( elem, 'my-class' )
+     */
+
+    /*jshint browser: true, strict: true, undef: true */
+    /*global define: false */
+
+    (function(window) {
+
+        'use strict';
+
+        // class helper functions from bonzo https://github.com/ded/bonzo
+
+        function classReg(className) {
+            return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
+        }
+
+        // classList support for class management
+        // altho to be fair, the api sucks because it won't accept multiple classes at once
+        var hasClass, addClass, removeClass;
+
+        if ('classList' in document.documentElement) {
+            hasClass = function(elem, c) {
+                return elem.classList.contains(c);
+            };
+            addClass = function(elem, c) {
+                elem.classList.add(c);
+            };
+            removeClass = function(elem, c) {
+                elem.classList.remove(c);
+            };
+        } else {
+            hasClass = function(elem, c) {
+                return classReg(c).test(elem.className);
+            };
+            addClass = function(elem, c) {
+                if (!hasClass(elem, c)) {
+                    elem.className = elem.className + ' ' + c;
+                }
+            };
+            removeClass = function(elem, c) {
+                elem.className = elem.className.replace(classReg(c), ' ');
+            };
+        }
+
+        function toggleClass(elem, c) {
+            var fn = hasClass(elem, c) ? removeClass : addClass;
+            fn(elem, c);
+        }
+
+        var classie = {
+            // full names
+            hasClass: hasClass,
+            addClass: addClass,
+            removeClass: removeClass,
+            toggleClass: toggleClass,
+            // short names
+            has: hasClass,
+            add: addClass,
+            remove: removeClass,
+            toggle: toggleClass
+        };
+
+        // transport
+        if (typeof define === 'function' && define.amd) {
+            // AMD
+            define(classie);
+        } else {
+            // browser global
+            window.classie = classie;
+        }
+
+    })(window);
+    </script>
+    <script>
+    ;
+    (function() {
+
+        'use strict';
+
+        var support = {
+                animations: Modernizr.cssanimations
+            },
+            animEndEventNames = {
+                'WebkitAnimation': 'webkitAnimationEnd',
+                'OAnimation': 'oAnimationEnd',
+                'msAnimation': 'MSAnimationEnd',
+                'animation': 'animationend'
+            },
+            animEndEventName = animEndEventNames[Modernizr.prefixed('animation')];
+
+        function extend(a, b) {
+            for (var key in b) {
+                if (b.hasOwnProperty(key)) {
+                    a[key] = b[key];
+                }
+            }
+            return a;
+        }
+
+        function onEndAnimation(el, callback) {
+            var onEndCallbackFn = function(ev) {
+                if (support.animations) {
+                    if (ev.target != this) return;
+                    this.removeEventListener(animEndEventName, onEndCallbackFn);
+                }
+                if (callback && typeof callback === 'function') {
+                    callback.call();
+                }
+            };
+
+            if (support.animations) {
+                el.addEventListener(animEndEventName, onEndCallbackFn);
+            } else {
+                onEndCallbackFn();
+            }
+        }
+
+        function Slideshow(el, options) {
+            this.el = el;
+            this.options = extend({}, this.options);
+            extend(this.options, options);
+            this.items = [].slice.call(this.el.children);
+            this.itemsCount = this.items.length;
+            this.current = this.options.start >= 0 || this.options.start < this.itemsCount ? this.options.start : 0,
+                this._setCurrent();
+            this._startSlideshow();
+        }
+
+        Slideshow.prototype.options = {
+            start: 0,
+            interval: 3500
+        }
+
+        Slideshow.prototype._startSlideshow = function() {
+            if (this.slideshowtime) {
+                clearTimeout(this.slideshowtime);
+            }
+            var self = this;
+            this.slideshowtime = setTimeout(function() {
+                self._navigate('next');
+                self._startSlideshow();
+            }, this.options.interval);
+        }
+
+        Slideshow.prototype._navigate = function(direction) {
+            var self = this,
+                // current item
+                oldItem = this.items[this.current];
+
+            if (direction === 'next') {
+                this.current = this.current < this.itemsCount - 1 ? ++this.current : 0;
+            } else {
+                this.current = this.current > 0 ? --this.current : this.itemsCount - 1;
+            }
+
+            // new item
+            var newItem = this.items[this.current];
+
+            classie.add(oldItem, direction === 'next' ? 'out--next' : 'out--prev');
+            classie.add(newItem, direction === 'next' ? 'in--next' : 'in--prev');
+
+            onEndAnimation(newItem, function() {
+                self._setCurrent(oldItem);
+                classie.remove(oldItem, direction === 'next' ? 'out--next' : 'out--prev');
+                classie.remove(newItem, direction === 'next' ? 'in--next' : 'in--prev');
+            });
+        }
+
+        Slideshow.prototype._setCurrent = function(old) {
+            if (old) {
+                classie.remove(old, 'current');
+            }
+            classie.add(this.items[this.current], 'current');
+        }
+
+        window.Slideshow = Slideshow;
+
+    })();
+    </script>
+    <script>
+    (function() {
+        new Slideshow(document.getElementById('slideshow'));
+
+        /* Mockup responsiveness */
+        var body = docElem = window.document.documentElement,
+            wrap = document.getElementById('wrap'),
+            mockup = wrap.querySelector('.mockup'),
+            mockupWidth = mockup.offsetWidth;
+
+        scaleMockup();
+
+        function scaleMockup() {
+            var wrapWidth = wrap.offsetWidth,
+                val = wrapWidth / mockupWidth;
+
+            mockup.style.transform = 'scale3d(' + val + ', ' + val + ', 1)';
+            mockup.style.WebkitTransform = 'scale3d(' + val + ', ' + val + ', 1)';
+        }
+
+        window.addEventListener('resize', resizeHandler);
+
+        function resizeHandler() {
+            function delayed() {
+                resize();
+                resizeTimeout = null;
+            }
+            if (typeof resizeTimeout != 'undefined') {
+                clearTimeout(resizeTimeout);
+            }
+            resizeTimeout = setTimeout(delayed, 50);
+        }
+
+        function resize() {
+            scaleMockup();
+        }
+    })();
+    </script>
+    <script>
+    
+			(function() {
+				new Slideshow( document.getElementById( 'slideshow' ) );
+
+				/* Mockup responsiveness */
+				var body = docElem = window.document.documentElement,
+					wrap = document.getElementById( 'wrap' ),
+					mockup = wrap.querySelector( '.mockup' ),
+					mockupWidth = mockup.offsetWidth;
+
+				scaleMockup();
+
+				function scaleMockup() {
+					var wrapWidth = wrap.offsetWidth,
+						val = wrapWidth / mockupWidth;
+
+					mockup.style.transform = 'scale3d(' + val + ', ' + val + ', 1)';
+					mockup.style.WebkitTransform = 'scale3d(' + val + ', ' + val + ', 1)';
+				}
+				
+				window.addEventListener( 'resize', resizeHandler );
+
+				function resizeHandler() {
+					function delayed() {
+						resize();
+						resizeTimeout = null;
+					}
+					if ( typeof resizeTimeout != 'undefined' ) {
+						clearTimeout( resizeTimeout );
+					}
+					resizeTimeout = setTimeout( delayed, 50 );
+				}
+
+				function resize() {
+					scaleMockup();
+				}
+			})();
+		
+    </script>
+</body>
+
+</html>

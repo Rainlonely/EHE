@@ -55,6 +55,12 @@ nav .container ul li {
   line-height: 100px;
   color: #606060;
 }
+nav .container ul li a {
+  font-size: 14px;
+  -webkit-transition: font-size 0.1s;
+  text-decoration: none;
+  color: #606060;
+}
 nav .container ul li:nth-child(1) {
   color: #8a806d;
 }
@@ -62,4 +68,16 @@ nav .container .change-lang a {
   line-height: 100px;
   color: #606060;
   display: inline-block;
+}
+.container.content {
+  border: 1px solid;
+  height: 1800px;
+}
+nav.fixed {
+  position: fixed;
+  top: 0;
+  height: 100px;
+}
+nav .container ul li > a:hover {
+  font-size: 16px;
 }

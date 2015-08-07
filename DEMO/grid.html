@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Grid SYS</title>
+    <style>
+ * {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+
+/* ---- grid ---- */
+
+.grid {
+  background: #DDD;
+  max-width: 1200px;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-item {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #0D8;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.7);
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.grid-item--width2 { width: 200px; }
+.grid-item--height2 { height: 200px; }
+
+    .grid-item {
+    	/*height: 100%;*/
+    	-webkit-filter: grayscale(1);
+    	transition:All 0.4s ease-in-out;
+    	background-size: cover;
+    	background-repeat: no-repeat;
+    	background-position: center;
+
+
+    }
+   	.grid-item:hover{
+   		-webkit-filter: grayscale(.3);
+   		transform:scale(1.2);
+   	}
+
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="grid-item" style="background-image: url(images/book1.jpg);">
+        	
+        </div>
+        <div class="grid-item grid-item--height2" style="background-image: url(images/book2.jpg);">
+        </div>
+        <div class="grid-item grid-item--width2 grid-item--height2" style="background-image: url(images/book3.jpg);">
+        </div>
+        <div class="grid-item grid-item--height2" style="background-image: url(images/book4.jpg);">
+        </div>
+        <div class="grid-item" style="background-image: url(images/book5.jpg);">
+        </div>
+        <div class="grid-item" style="background-image: url(images/bg-tutorDetial1.jpg);">
+        </div>
+        <div class="grid-item grid-item--height2" style="background-image: url(images/bg-tutorDetial2.jpg);">
+        </div>
+        <div class="grid-item grid-item--width2" style="background-image: url(images/bg-tutorDetial3.jpg);">
+        </div>
+        <div class="grid-item" style="background-image: url(images/bg-tutorDetial4.jpg);">
+        </div>
+        <div class="grid-item grid-item--width2" style="background-image: url(images/bg-tutorDetial5.jpg);"></div>
+	  <div class="grid-item grid-item--height2" style="background-image: url(images/bg-tutorDetial6.jpg);"></div>
+	  <div class="grid-item" style="background-image: url(images/bg-tutorDetial7.jpg);"></div>
+	  <div class="grid-item" style="background-image: url(images/bg-tutorDetial8.jpg);"></div>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script src="isotope.pkgd.min.js"></script>
+    <script>
+    $(document).ready( function() {
+    $('.grid').isotope({
+        // options
+        itemSelector: '.grid-item',
+        
+        masonry: {
+				// use outer width of grid-sizer for columnWidth
+				columnWidth: 100,
+				gutter:10
+			},
+    });})
+    </script>
+</body>
+
+</html>
