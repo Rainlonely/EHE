@@ -1321,11 +1321,11 @@ mark,
   color: #777777;
 }
 .text-primary {
-  color: #25579c;
+  color: #7a6f59;
 }
 a.text-primary:hover,
 a.text-primary:focus {
-  color: #1b4073;
+  color: #5d5443;
 }
 .text-success {
   color: #3c763d;
@@ -1357,11 +1357,11 @@ a.text-danger:focus {
 }
 .bg-primary {
   color: #fff;
-  background-color: #25579c;
+  background-color: #7a6f59;
 }
 a.bg-primary:hover,
 a.bg-primary:focus {
-  background-color: #1b4073;
+  background-color: #5d5443;
 }
 .bg-success {
   background-color: #dff0d8;
@@ -3089,26 +3089,26 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #ffffff;
-  background-color: #25579c;
-  border-color: #204c87;
+  background-color: #7a6f59;
+  border-color: #6b624e;
 }
 .btn-primary:focus,
 .btn-primary.focus {
   color: #ffffff;
-  background-color: #1b4073;
-  border-color: #081220;
+  background-color: #5d5443;
+  border-color: #221f18;
 }
 .btn-primary:hover {
   color: #ffffff;
-  background-color: #1b4073;
-  border-color: #143056;
+  background-color: #5d5443;
+  border-color: #484134;
 }
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #1b4073;
-  border-color: #143056;
+  background-color: #5d5443;
+  border-color: #484134;
 }
 .btn-primary:active:hover,
 .btn-primary.active:hover,
@@ -3120,8 +3120,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active.focus,
 .open > .dropdown-toggle.btn-primary.focus {
   color: #ffffff;
-  background-color: #143056;
-  border-color: #081220;
+  background-color: #484134;
+  border-color: #221f18;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -3146,11 +3146,11 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #25579c;
-  border-color: #204c87;
+  background-color: #7a6f59;
+  border-color: #6b624e;
 }
 .btn-primary .badge {
-  color: #25579c;
+  color: #7a6f59;
   background-color: #ffffff;
 }
 .btn-success {
@@ -3578,7 +3578,7 @@ tbody.collapse.in {
   color: #ffffff;
   text-decoration: none;
   outline: 0;
-  background-color: #25579c;
+  background-color: #7a6f59;
 }
 .dropdown-menu > .disabled > a,
 .dropdown-menu > .disabled > a:hover,
@@ -4098,7 +4098,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #ffffff;
-  background-color: #25579c;
+  background-color: #7a6f59;
 }
 .nav-stacked > li {
   float: none;
@@ -4753,8 +4753,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > .active > span:focus {
   z-index: 2;
   color: #ffffff;
-  background-color: #25579c;
-  border-color: #25579c;
+  background-color: #7a6f59;
+  border-color: #7a6f59;
   cursor: default;
 }
 .pagination > .disabled > span,
@@ -4871,11 +4871,11 @@ a.label:focus {
   background-color: #5e5e5e;
 }
 .label-primary {
-  background-color: #25579c;
+  background-color: #7a6f59;
 }
 .label-primary[href]:hover,
 .label-primary[href]:focus {
-  background-color: #1b4073;
+  background-color: #5d5443;
 }
 .label-success {
   background-color: #5cb85c;
@@ -5123,7 +5123,7 @@ a.thumbnail.active {
   line-height: 20px;
   color: #ffffff;
   text-align: center;
-  background-color: #25579c;
+  background-color: #7a6f59;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   transition: width 0.6s ease;
 }
@@ -5272,8 +5272,8 @@ button.list-group-item {
 .list-group-item.active:focus {
   z-index: 2;
   color: #ffffff;
-  background-color: #25579c;
-  border-color: #25579c;
+  background-color: #7a6f59;
+  border-color: #7a6f59;
 }
 .list-group-item.active .list-group-item-heading,
 .list-group-item.active:hover .list-group-item-heading,
@@ -5289,7 +5289,7 @@ button.list-group-item {
 .list-group-item.active .list-group-item-text,
 .list-group-item.active:hover .list-group-item-text,
 .list-group-item.active:focus .list-group-item-text {
-  color: #a4c1e9;
+  color: #d7d2c8;
 }
 .list-group-item-success {
   color: #3c763d;
@@ -5668,22 +5668,22 @@ button.list-group-item-danger.active:focus {
   border-bottom-color: #dddddd;
 }
 .panel-primary {
-  border-color: #25579c;
+  border-color: #7a6f59;
 }
 .panel-primary > .panel-heading {
   color: #ffffff;
-  background-color: #25579c;
-  border-color: #25579c;
+  background-color: #7a6f59;
+  border-color: #7a6f59;
 }
 .panel-primary > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #25579c;
+  border-top-color: #7a6f59;
 }
 .panel-primary > .panel-heading .badge {
-  color: #25579c;
+  color: #7a6f59;
   background-color: #ffffff;
 }
 .panel-primary > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #25579c;
+  border-bottom-color: #7a6f59;
 }
 .panel-success {
   border-color: #d6e9c6;

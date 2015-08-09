@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    <title></title>
+    <title>易和设计</title>
     <link rel="stylesheet" type="text/css" href="../resources/css/jquery.min.css">
     <!-- <link rel="stylesheet" type="text/css" href="../resources/css/jquery.booklet.latest.css"> -->
     <link rel="stylesheet" type="text/css" href="../resources/css/bootstrap.min.css">
@@ -109,12 +109,13 @@
         </div>
     </div>
     <div class="about-box">
-        <div class="about-bg"></div>
-        <div class="container">
-            <header class="box-header">关于我们</header>
-            <p>秉承“设计创造价值，专业提升品质”的设计服务理念，
-                <br>致力于创造高品质的室内空间</p>
-            <a href="" class="btn-squre btn-brand">点击了解更多<i class="icon-arrow"></i></a>
+        <div class="about-bg">
+            <div class="container">
+                <header class="box-header">关于我们</header>
+                <p>秉承“设计创造价值，专业提升品质”的设计服务理念，
+                    <br>致力于创造高品质的室内空间</p>
+                <a href="" class="btn-squre btn-brand">点击了解更多<i class="icon-arrow"></i></a>
+            </div>    
         </div>
     </div>
     <footer>
@@ -161,22 +162,14 @@
         </div>
     </footer>
     <script src="../resources/js/jquery.min.js"></script>
-    <!--<script src="../resources/js/jquery-ui.min.js"></script>
-    <script src="../resources/js/jquery.easing.min.js"></script>
-    <script src="../resources/js/jquery.booklet.latest.min.js"></script>
-    <script src="../resources/js/imagesloaded.pkgd.min.js"></script>-->
     <script src="../resources/js/bootstrap.min.js"></script>
+
+    
     <script type="text/javascript">
     $(document).ready(function() {
         var screenHeight = $(window).height();
         $('.sliderContainer').css('height', screenHeight + 'px');
-    })
-    $(function() {
-        var imgLoadNum = 0;
         var _ishit = false;
-
-        var totalImgLength = $('img').length;
-
         $(window).on('scroll', function(e) {
             var scrollTop = $(document).scrollTop();
             var navHeight = $('#nav_bar').height();
@@ -189,7 +182,10 @@
                 $('#nav_bar').removeClass('fixed');
 
         });
-
+    });
+    //$(function() {
+        //var imgLoadNum = 0;
+        //var totalImgLength = $('img').length;
         // $('#mybook').booklet({
         //     width: '150%',
         //     height: screenHeight,
@@ -207,8 +203,12 @@
         //       // columnWidth: 200
         //     });
         // });
-    });
+    //});
     </script>
+    <!--<script src="../resources/js/jquery-ui.min.js"></script>
+    <script src="../resources/js/jquery.easing.min.js"></script>
+    <script src="../resources/js/jquery.booklet.latest.min.js"></script>
+    <script src="../resources/js/imagesloaded.pkgd.min.js"></script>-->
 </body>
 
 </html>

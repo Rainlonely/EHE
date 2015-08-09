@@ -56,7 +56,9 @@ module.exports = function (grunt) {
                     ".tmp/styles/bootstrap.css": "<%= web.app %>/assets/less/bootstrap.less",
                     ".tmp/styles/variables.css": "<%= web.app %>/assets/less/variables.less",
                     ".tmp/styles/fontawesome.css": "./bower_components/fontawesome/less/font-awesome.less",
-                    ".tmp/styles/index.css": "<%= web.app %>/assets/less/index.less"
+                    ".tmp/styles/global.css": "<%= web.app %>/assets/less/global.less",
+                    ".tmp/styles/index.css": "<%= web.app %>/assets/less/index.less",
+                    ".tmp/styles/content.grid.css": "<%= web.app %>/assets/less/content.grid.less"
                 }
             }
         },
@@ -188,9 +190,21 @@ module.exports = function (grunt) {
                     },
                     {
                         expand: true,
+                        cwd: 'bower_components/isotope/dist',
+                        src: ['isotope.pkgd.min.js'],
+                        dest: '<%= web.dist %>/resources/js'  
+                    },
+                    {
+                        expand: true,
                         cwd: 'app/assets/js',
                         src: ['jquery.booklet.latest.min.js'],
                         dest: '<%= web.dist %>/resources/js'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'app/assets/css',
+                        src: ['jquery.booklet.latest.css'],
+                        dest: '<%= web.dist %>/resources/css'
                     },
                     {
                         expand: true,
@@ -204,30 +218,25 @@ module.exports = function (grunt) {
                         src: ['jquery.slider.css'],
                         dest: '<%= web.dist %>/resources/css'
                     },
-                    {
-                        expand: true,
-                        cwd: 'app/assets/css',
-                        src: ['jquery.booklet.latest.css'],
-                        dest: '<%= web.dist %>/resources/css'
-                    },
-                    {
-                        expand:true,
-                        cwd: 'bower_components/jquery.easing/js',
-                        src: ['jquery.easing.min.js'],
-                        dest: '<%= web.dist %>/resources/js'
-                    },
-                    {
-                        expand:true,
-                        cwd: 'bower_components/jqueryui',
-                        src: ['jquery-ui.min.js'],
-                        dest: '<%= web.dist %>/resources/js'
-                    },
-                    {
-                        expand:true,
-                        cwd: 'bower_components/masonry/dist',
-                        src: ['masonry.pkgd.min.js'],
-                        dest: '<%= web.dist %>/resources/js'
-                    },
+                    
+                    // {
+                    //     expand:true,
+                    //     cwd: 'bower_components/jquery.easing/js',
+                    //     src: ['jquery.easing.min.js'],
+                    //     dest: '<%= web.dist %>/resources/js'
+                    // },
+                    // {
+                    //     expand:true,
+                    //     cwd: 'bower_components/jqueryui',
+                    //     src: ['jquery-ui.min.js'],
+                    //     dest: '<%= web.dist %>/resources/js'
+                    // },
+                    // {
+                    //     expand:true,
+                    //     cwd: 'bower_components/masonry/dist',
+                    //     src: ['masonry.pkgd.min.js'],
+                    //     dest: '<%= web.dist %>/resources/js'
+                    // },
                     {
                         expand:true,
                         cwd: 'bower_components/imagesloaded',

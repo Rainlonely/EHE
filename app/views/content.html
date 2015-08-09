@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>项目展示</title>
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery.min.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/fontawesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/content.min.css">
+</head>
+
+<body>
+    <nav id="nav_bar" class="fixed">
+        <div class="container">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">项目展示</a></li>
+                <li><a href="#">关于易和</a></li>
+                <li><a href="#">易和咨询</a></li>
+                <li><a href="#">联系我们</a></li>
+                <li><a href="#">相关链接</a></li>
+                <li>
+                    <a href=""><i class="fa fa-language"></i>English</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+    
+        <div class="grid">
+	        <div id="menu" class="grid-item">
+		        <p>全部项目</p>
+		        <i class="fa fa-align-justify"></i>
+		        <div class="filter-list">
+		        	
+		        </div>
+		    </div>
+            <div class="grid-item grid-item--width2">
+                <figure style="background-image: url(../resources/images/book1.jpg)"></figure>
+            </div>
+            <div class="grid-item grid-item--height2">
+                <figure style="background-image: url(../resources/images/book2.jpg)"></figure>
+            </div>
+            <div class="grid-item">
+                <figure style="background-image: url(../resources/images/book3.jpg)"></figure>
+            </div>
+            <div class="grid-item">
+                <figure style="background-image: url(../resources/images/book4.jpg)"></figure>
+            </div>
+            <div class="grid-item grid-item--width2 grid-item--height2">
+                <figure style="background-image: url(../resources/images/book5.jpg)"></figure>
+            </div>
+            <div class="grid-item grid-item--width2">
+                <figure style="background-image: url(../resources/images/book1.jpg)"></figure>
+            </div>
+            <div class="grid-item grid-item--width2">
+                <figure style="background-image: url(../resources/images/book2.jpg)"></figure>
+            </div>
+            <div class="grid-item grid-item--height2">
+                <figure style="background-image: url(../resources/images/book3.jpg)"></figure>
+            </div>
+            <div class="grid-item">
+                <figure style="background-image: url(../resources/images/book4.jpg)"></figure>
+            </div>
+            <div class="grid-item grid-item--width2">
+                <figure style="background-image: url(../resources/images/book5.jpg)"></figure>
+            </div>
+            <div class="grid-item grid-item--height2">
+                <figure style="background-image: url(../resources/images/book1.jpg)"></figure>
+            </div>
+            <div class="grid-item">
+                <figure style="background-image: url(../resources/images/book1.jpg)"></figure>
+            </div>
+            <div class="grid-item">
+                <figure style="background-image: url(../resources/images/book3.jpg)"></figure>
+            </div>
+        </div>
+    </div>
+    <script src="../resources/js/jquery.min.js"></script>
+    <script src="../resources/js/bootstrap.min.js"></script>
+    <script src="../resources/js/isotope.pkgd.min.js"></script>
+    <script>
+    $(document).ready(function() {
+          $('.grid').isotope({
+		    itemSelector: '.grid-item',
+		    masonry: {
+		      columnWidth: 208,
+		      gutter: 19
+		    }
+		  });
+    })
+    </script>
+</body>

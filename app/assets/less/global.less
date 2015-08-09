@@ -1,0 +1,169 @@
+@import "variables.less";
+nav {
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+    border-bottom: 1px solid #7a6f59;
+    .container {
+        overflow: hidden;
+        width: 1200px;
+        margin: 0 auto;
+        height: 100px;
+        ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+            li {
+                list-style: none;
+                float: left;
+                text-align: center;
+                line-height: 42px;
+                color: #606060;
+                margin-top: 25px;
+                margin-bottom: 25px;
+                width: 145px;
+                a {
+                    font-size: 14px;
+                    -webkit-transition: font-size .1s;
+                    text-decoration: none;
+                    color: #606060;
+                }
+            }
+            li:nth-last-child(1) {
+                border-left: 1px solid #7a6f59;
+                padding-left: 65px;
+                i {
+                    margin-right: 10px;
+                }
+            }
+            li:hover {
+                a {
+                    color: #7a6f59;
+                    font-size: 16px;
+                }
+                
+            }
+        }
+        .change-lang a {
+            line-height: 100px;
+            color: #606060;
+            display: inline-block;
+        }
+    }
+}
+
+nav.fixed {
+    position: fixed;
+    top: 0;
+    height: 100px;
+}
+
+
+.btn-squre {
+    width: 125px;
+    height: 125px;
+    display: block;
+    padding: 15px 45px 15px 15px;
+    position: relative;
+    background-color: rgba(255, 255, 255, .85);
+    color: #7a6f59;
+    border: 1px solid #7a6f59;
+    transition:All 0.4s ease-in-out;
+    .icon-arrow {
+        width: 25px;
+        height: 25px;
+        display: block;
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        border-right: 1px solid #7a6f59;
+        border-bottom: 1px solid #7a6f59;
+    }
+    .icon-arrow:before {
+        content: "";
+        position: absolute;
+        width: 32px;
+        height: 1px;
+        background-color: #7a6f59;
+        transform: rotate(45deg);
+        display: block;
+        bottom: 10px;
+        left: -3px;
+    }
+}
+
+.btn-squre:hover {
+    text-decoration: none;
+    background-color: #7a6f59;
+    color: #fff;
+    .icon-arrow {
+        border-color: #fff;
+    }
+    .icon-arrow:before {
+        background-color: #fff;
+    }
+}
+
+footer{
+    background-color: #7a6f59;
+    height: 250px;
+    .container{
+        display: flex;
+        justify-content: flex-start;    
+        color:  rgba(255,255,255,.85);
+        a{color: rgba(255,255,255,.85);}
+        .logo-box{
+            width: 230px;
+            height: 175px;
+            text-align: center;
+            margin: 40px 0 auto 0;
+            background-image: url(../images/logo_footer.jpg);
+            background-repeat: no-repeat;
+            background-position: center 30%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            border-right: 2px solid #fff;
+            h3 {
+                margin-bottom: 30px;
+            }
+        }
+        .map-box{
+            display: flex;
+            flex-direction:column;
+            justify-content: space-between;
+            margin: 50px 0 auto 60px;
+            height: 170px;
+            .site-map{
+                width: 470px;
+                display: flex;
+                justify-content: space-between;
+                ul{
+                    list-style: none;
+                    padding: 0;
+                }
+            }
+        }
+        .conact-box{
+            display: flex;
+            flex-direction:column;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin: 50px 0 auto auto; 
+            height: 160px;
+            span{
+                font-size: 24px;
+                i{margin-right: 10px;}
+            }
+            .sns-box{
+                i{
+                    color: rgba(255,255,255,.85);
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
