@@ -25,6 +25,7 @@ nav {
                 margin-top: 25px;
                 margin-bottom: 25px;
                 width: 145px;
+                position: relative;
                 a {
                     font-size: 14px;
                     -webkit-transition: font-size .1s;
@@ -60,7 +61,59 @@ nav.fixed {
     top: 0;
     height: 100px;
 }
-
+.spinner > div {
+  opacity: 0;
+  background-color: #7a6f59;
+  height: 30px;
+  width: 6px;
+  display: inline-block;
+  position: absolute;
+  bottom: -42px;
+  left: 42px;  
+  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+ 
+.spinner:hover > div{
+  opacity: 1;
+}
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+  left: 56px;
+}
+ 
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+  left: 68px;
+}
+ 
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+  left: 80px;
+}
+ 
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+  left: 92px;
+}
+@-webkit-keyframes stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) } 
+  20% { -webkit-transform: scaleY(1.0) }
+}
+ 
+@keyframes stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
 
 .btn-squre {
     width: 125px;
