@@ -6,6 +6,7 @@ nav {
     bottom: 0;
     z-index: 100;
     border-bottom: 1px solid #7a6f59;
+    
     .container {
         overflow: hidden;
         width: 1200px;
@@ -16,42 +17,123 @@ nav {
             margin: 0;
             display: flex;
             justify-content: space-around;
+            align-items: center;
+            height: 100%;
             li {
                 list-style: none;
                 float: left;
                 text-align: center;
-                line-height: 42px;
+                height: 100%;
                 color: #606060;
-                margin-top: 25px;
-                margin-bottom: 25px;
-                width: 145px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: space-between;
                 position: relative;
                 a {
                     font-size: 14px;
                     -webkit-transition: font-size .1s;
                     text-decoration: none;
                     color: #606060;
+                    margin-top: 40px;
+                    display: flex;
+                    justify-content: flex-start;
                 }
-            }
-            li:nth-last-child(1) {
-                border-left: 1px solid #7a6f59;
-                padding-left: 65px;
-                i {
+                .icon-global {
+                	background-image: url(../images/English.png);
+                	background-repeat: no-repeat;
                     margin-right: 10px;
+                    margin-top: -5px;
+                    width: 26px;
+                    height: 27px;
+                }
+                .spinner > div {
+                    opacity: 0;
+                    background-color: #7a6f59;
+                    height: 30px;
+                    width: 1px;
+                    display: inline-block;
+                    position: relative;
+                    bottom: -15px;
+                    left: 0;
+                    -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+                    animation: stretchdelay 1.2s infinite ease-in-out;
+                }
+                
+                .spinner .rect2 {
+                    -webkit-animation-delay: -1.1s;
+                    animation-delay: -1.1s;
+                    left: 1%;
+                }
+                .spinner .rect3 {
+                    -webkit-animation-delay: -1.0s;
+                    animation-delay: -1.0s;
+                    left: 2%;
+                }
+                .spinner .rect4 {
+                    -webkit-animation-delay: -0.9s;
+                    animation-delay: -0.9s;
+                    left: 3%;
+                }
+                .spinner .rect5 {
+                    -webkit-animation-delay: -0.8s;
+                    animation-delay: -0.8s;
+                    left: 4%;
+                }
+                .spinner .rect6 {
+                    -webkit-animation-delay: -0.7s;
+                    animation-delay: -0.7s;
+                    left: 5%;
+                }
+                .spinner .rect7 {
+                    -webkit-animation-delay: -0.6s;
+                    animation-delay: -0.6s;
+                    left: 6%;
+                }
+                .spinner .rect8 {
+                    -webkit-animation-delay: -0.5s;
+                    animation-delay: -0.5s;
+                    left: 7%;
+                }
+                .spinner .rect9 {
+                    -webkit-animation-delay: -0.4s;
+                    animation-delay: -0.4s;
+                    left: 8%;
+                }
+                @-webkit-keyframes stretchdelay {
+                    0%, 40%, 100% {
+                        -webkit-transform: scaleY(0.4)
+                    }
+                    20% {
+                        -webkit-transform: scaleY(1.0)
+                    }
+                }
+                @keyframes stretchdelay {
+                    0%, 40%, 100% {
+                        transform: scaleY(0.4);
+                        -webkit-transform: scaleY(0.4);
+                    }
+                    20% {
+                        transform: scaleY(1.0);
+                        -webkit-transform: scaleY(1.0);
+                    }
                 }
             }
-            li:hover {
-                a {
+            li:hover { 
+            	a {
                     color: #7a6f59;
                     font-size: 16px;
                 }
-                
+            	.spinner div{
+                    opacity: 1;
+                }
             }
-        }
-        .change-lang a {
-            line-height: 100px;
-            color: #606060;
-            display: inline-block;
+            li:nth-last-child(1) {
+		        border-left: 1px solid #7a6f59;
+		        padding-left: 65px;
+		        height: 50%;
+		        a{margin-top: 15px;} 
+		    }
         }
     }
 }
@@ -60,59 +142,6 @@ nav.fixed {
     position: fixed;
     top: 0;
     height: 100px;
-}
-.spinner > div {
-  opacity: 0;
-  background-color: #7a6f59;
-  height: 30px;
-  width: 6px;
-  display: inline-block;
-  position: absolute;
-  bottom: -42px;
-  left: 42px;  
-  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
-  animation: stretchdelay 1.2s infinite ease-in-out;
-}
- 
-.spinner:hover > div{
-  opacity: 1;
-}
-.spinner .rect2 {
-  -webkit-animation-delay: -1.1s;
-  animation-delay: -1.1s;
-  left: 56px;
-}
- 
-.spinner .rect3 {
-  -webkit-animation-delay: -1.0s;
-  animation-delay: -1.0s;
-  left: 68px;
-}
- 
-.spinner .rect4 {
-  -webkit-animation-delay: -0.9s;
-  animation-delay: -0.9s;
-  left: 80px;
-}
- 
-.spinner .rect5 {
-  -webkit-animation-delay: -0.8s;
-  animation-delay: -0.8s;
-  left: 92px;
-}
-@-webkit-keyframes stretchdelay {
-  0%, 40%, 100% { -webkit-transform: scaleY(0.4) } 
-  20% { -webkit-transform: scaleY(1.0) }
-}
- 
-@keyframes stretchdelay {
-  0%, 40%, 100% {
-    transform: scaleY(0.4);
-    -webkit-transform: scaleY(0.4);
-  }  20% {
-    transform: scaleY(1.0);
-    -webkit-transform: scaleY(1.0);
-  }
 }
 
 .btn-squre {
@@ -124,7 +153,7 @@ nav.fixed {
     background-color: rgba(255, 255, 255, .85);
     color: #7a6f59;
     border: 1px solid #7a6f59;
-    transition:All 0.4s ease-in-out;
+    transition: All 0.4s ease-in-out;
     .icon-arrow {
         width: 25px;
         height: 25px;
@@ -160,15 +189,17 @@ nav.fixed {
     }
 }
 
-footer{
+footer {
     background-color: #7a6f59;
     height: 250px;
-    .container{
+    .container {
         display: flex;
-        justify-content: flex-start;    
-        color:  rgba(255,255,255,.85);
-        a{color: rgba(255,255,255,.85);}
-        .logo-box{
+        justify-content: flex-start;
+        color: rgba(255, 255, 255, .85);
+        a {
+            color: rgba(255, 255, 255, .85);
+        }
+        .logo-box {
             width: 230px;
             height: 175px;
             text-align: center;
@@ -184,36 +215,38 @@ footer{
                 margin-bottom: 30px;
             }
         }
-        .map-box{
+        .map-box {
             display: flex;
-            flex-direction:column;
+            flex-direction: column;
             justify-content: space-between;
             margin: 50px 0 auto 60px;
             height: 170px;
-            .site-map{
+            .site-map {
                 width: 470px;
                 display: flex;
                 justify-content: space-between;
-                ul{
+                ul {
                     list-style: none;
                     padding: 0;
                 }
             }
         }
-        .conact-box{
+        .conact-box {
             display: flex;
-            flex-direction:column;
+            flex-direction: column;
             justify-content: space-between;
             align-items: flex-end;
-            margin: 50px 0 auto auto; 
+            margin: 50px 0 auto auto;
             height: 160px;
-            span{
+            span {
                 font-size: 24px;
-                i{margin-right: 10px;}
+                i {
+                    margin-right: 10px;
+                }
             }
-            .sns-box{
-                i{
-                    color: rgba(255,255,255,.85);
+            .sns-box {
+                i {
+                    color: rgba(255, 255, 255, 0.85);
                     margin-left: 20px;
                 }
             }
