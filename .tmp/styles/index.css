@@ -1,3 +1,6 @@
+a:hover {
+  text-decoration: none;
+}
 nav {
   width: 100%;
   background-color: #fff;
@@ -195,6 +198,77 @@ nav.fixed {
 }
 .btn-squre:hover .icon-arrow:before {
   background-color: #fff;
+}
+.btn-back {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.btn-back:before,
+.btn-back:after {
+  content: "";
+  position: absolute;
+  border-top: 1px solid #7e755e;
+  width: 100%;
+}
+.btn-back:before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.btn-back:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.btn-squre-prev,
+.btn-squre-next {
+  border: 1px solid #7e755e;
+  width: 150px;
+  height: 150px;
+  color: #7e755e;
+  position: relative;
+  font-size: 16px;
+}
+.btn-squre-prev {
+  text-align: right;
+  padding: 10px 25px 0 65px;
+}
+.btn-squre-next {
+  text-align: left;
+  padding: 10px 65px 0 25px;
+}
+.btn-squre-prev:before,
+.btn-squre-next:before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-top: 1px solid #7e755e;
+  border-left: 1px solid #7e755e;
+  bottom: 20px;
+}
+.btn-squre-prev:after,
+.btn-squre-next:after {
+  content: "";
+  position: absolute;
+  width: 43px;
+  border-top: 1px solid #7e755e;
+  bottom: 34px;
+}
+.btn-squre-prev:before {
+  left: 20px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.btn-squre-next:before {
+  right: 20px;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.btn-squre-prev:after {
+  left: 14px;
+}
+.btn-squre-next:after {
+  right: 14px;
 }
 footer {
   background-color: #7a6f59;
