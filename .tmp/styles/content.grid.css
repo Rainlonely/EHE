@@ -315,14 +315,60 @@ footer .container .conact-box .sns-box i {
   background-color: rgba(255, 255, 255, 0.85);
   border: 1px solid #7a6f59;
   color: #7a6f59;
-  font-size: 32px;
-  -webkit-writing-mode: vertical-rl;
+  transition: All 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
 }
-#menu p {
+#menu .menu-box {
+  width: 208px;
+  height: 208px;
+  position: absolute;
+  -webkit-writing-mode: vertical-rl;
+  font-size: 32px;
+}
+#menu .menu-box p {
   margin: 35px 125px auto 35px;
 }
-#menu i {
+#menu .menu-box i {
   position: absolute;
   right: 30px;
   bottom: 30px;
+}
+#menu .filter-list {
+  background-color: #fff;
+  color: #7a6f59;
+  position: absolute;
+  top: 208px;
+  font-size: 14px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  left: 20px;
+  width: 168px;
+}
+#menu .filter-list ul {
+  list-style: none;
+}
+#menu .filter-list ul li {
+  line-height: 50px;
+}
+#menu .filter-list ul li.is-checked {
+  position: relative;
+}
+#menu .filter-list ul li.is-checked:after {
+  position: absolute;
+  content: "\f106";
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+}
+#menu:hover {
+  height: 516px;
+  background-color: #7a6f59;
+  color: #fff;
+}
+#menu:hover .filter-list {
+  background-color: #7a6f59;
+  color: #fff;
 }
