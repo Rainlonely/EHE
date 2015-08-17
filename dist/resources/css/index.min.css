@@ -364,23 +364,11 @@ footer .container .conact-box .sns-box i {
   align-items: space-between;
 }
 .sliderContainer .container .logo-box {
-  background-color: #fff;
-  background-image: url(../images/logo_top.jpg);
+  background-image: url(../images/logo_top.png);
   background-repeat: no-repeat;
-  background-position: center 75%;
-  margin: 60px auto auto 50px;
-  color: #7a6f59;
+  background-size: cover;
   width: 225px;
   height: 337px;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: flex-end;
-  align-items: flex-end;
-}
-.sliderContainer .container .logo-box h3 {
-  margin-bottom: 30px;
 }
 .sliderContainer .container .slogan-box {
   color: #fff;
