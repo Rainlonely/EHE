@@ -118,7 +118,7 @@
         <div class="introduce-box">
             <div class="description-box">
                 <div class="border-box">
-                    <a href="" class="btn-back"></a>
+                    <a  class="btn-back"></a>
                     <ul class="detail-list">
                         <li>面积：210平米</li>
                         <li>室内设计：杭州易和室内设计有限公司</li>
@@ -140,7 +140,10 @@
     <script src="../resources/js/isotope.pkgd.min.js"></script>
     <script>
     $(document).ready(function(){
-        $('.description-box').addClass('cartoon');
+        $('.btn-back').click(function(){
+            $('.description-box').addClass('cartoon');    
+        })
+        
     });
     </script>
 </body>
