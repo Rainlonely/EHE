@@ -18,6 +18,8 @@
             position: relative;
             width: 225px;
             height: 337px;
+            overflow: hidden;
+            box-shadow:0 0 1.5rem rgba(0,0,0,.15);
             .logo-box-bg{
                 background-image: url(../images/logo_top.png);
                 background-repeat: no-repeat;
@@ -25,8 +27,8 @@
                 width: 225px;
                 height: 337px;
                  opacity: .85;
-                 -webkit-filter: blur(5px);
-                box-shadow:0 0 1.5rem rgba(0,0,0,.15);    
+                 //-webkit-filter: blur(10px);
+                
             }
             .logo{
                 background-image: url(../images/EHE_logo.svg);
@@ -35,9 +37,11 @@
                 bottom: 61px;
                 position: absolute;
                 left: 39px;
-                opacity: .3;
+                opacity: .7;
+                display: none;
             }
             
+       
         }
         .slogan-box {
             color: #fff;
@@ -130,11 +134,13 @@
                 overflow: hidden;
                 position: relative;
                 img{
-                    width: 102%;
+                    width: 106%;
                     position: absolute;
-                    top: -20%;
+                    top: -15%;
                     -webkit-filter: grayscale(0.7);
-                    transition: All 0.4s ease-in-out;
+                    -webkit-transform: scale(1.2);
+                    transition: All 0.8s ease-in-out;
+                    left: -3%;
                 }
             }
             
