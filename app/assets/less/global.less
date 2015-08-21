@@ -5,7 +5,7 @@ nav {
     background-color: #fff;
     position: absolute;
     bottom: 0;
-    z-index: 100;
+    z-index: 10000;
     border-bottom: 1px solid #7a6f59;
     
     .container {
@@ -16,17 +16,18 @@ nav {
         ul {
             padding: 0;
             margin: 0;
-            display: flex;
+            display: flex; display: -webkit-flex;
             justify-content: space-around;
             align-items: center;
             height: 100%;
             li {
+                width: 200px;
                 list-style: none;
                 float: left;
                 text-align: center;
                 height: 100%;
                 color: #606060;
-                display: flex;
+                display: flex; display: -webkit-flex;
                 align-items: center;
                 flex-direction: column;
                 justify-content: space-between;
@@ -37,7 +38,7 @@ nav {
                     text-decoration: none;
                     color: #606060;
                     margin-top: 40px;
-                    display: flex;
+                    display: flex; display: -webkit-flex;
                     justify-content: flex-start;
                 }
                 .icon-global {
@@ -259,7 +260,7 @@ footer {
     background-color: #7a6f59;
     height: 250px;
     .container {
-        display: flex;
+        display: flex; display: -webkit-flex;
         justify-content: flex-start;
         color: rgba(255, 255, 255, .85);
         a {
@@ -273,7 +274,7 @@ footer {
             background-image: url(../images/logo_footer.jpg);
             background-repeat: no-repeat;
             background-position: center 30%;
-            display: flex;
+            display: flex; display: -webkit-flex;
             justify-content: center;
             align-items: flex-end;
             border-right: 2px solid #fff;
@@ -282,14 +283,14 @@ footer {
             }
         }
         .map-box {
-            display: flex;
+            display: flex; display: -webkit-flex;
             flex-direction: column;
             justify-content: space-between;
             margin: 50px 0 auto 60px;
             height: 170px;
             .site-map {
                 width: 470px;
-                display: flex;
+                display: flex; display: -webkit-flex;
                 justify-content: space-between;
                 ul {
                     list-style: none;
@@ -298,7 +299,7 @@ footer {
             }
         }
         .conact-box {
-            display: flex;
+            display: flex; display: -webkit-flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: flex-end;

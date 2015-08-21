@@ -4,107 +4,131 @@
 /* ---- grid ---- */
 
 .grid {
-  //background: #DDD;
-  max-width: 1140px;
-  margin-top: 140px;
+    //background: #DDD;
+    max-width: 1140px;
+    margin-top: 140px;
 }
 
+
 /* clear fix */
+
 .grid:after {
-  content: '';
-  display: block;
-  clear: both;
+    content: '';
+    display: block;
+    clear: both;
 }
 
 .grid-item {
-  float: left;
-  width: 208px;
-  height: 208px;
-  margin-bottom: 19px;
-  figure{
-		width: 100%;
-		height: 100%;
-		-webkit-filter: grayscale(.9);
-		transition:All 0.2s ease-in-out;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-		z-index: 0
-	}
-	figure:hover{
-		-webkit-filter: grayscale(.3);
-		transform:scale(1.02);
-		z-index: 100;
-	}
-}
-.grid-item--width2 { width: 436px; }
-.grid-item--height2 { height: 436px; }
-
-
-
-#menu{
-	background-color: rgba(255,255,255,.85);
-	border: 1px solid @brand-primary;
-	color: @brand-primary;
-	transition:All 0.2s ease-in-out;
-	//height: 516px;
-	
-	position: relative;
-	// display: flex;
-	// flex-direction: column;
-	overflow: hidden;
-	z-index: 2;
-	.menu-box{
-		width: 208px;
-		height: 208px;
-		position: absolute;
-		-webkit-writing-mode: vertical-rl;
-		font-size: 32px;
-		p{margin: 35px 125px auto 35px;}
-		i{ 
+    float: left;
+    width: 208px;
+    height: 208px;
+    margin-bottom: 19px;
+    figure {
+        width: 100%;
+        height: 100%;
+        -webkit-filter: grayscale(.9);
+        transition: All 0.2s ease-in-out;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 0;
+        overflow: hidden;
+        .item-info{
 			position: absolute;
-			right: 30px;
-			bottom: 30px;
-		}	
-	}
-	
-	//padding-left: 200px;
-	.filter-list{
-	    background-color: #fff;
-	    color: @brand-primary;
-    	position: absolute;
-    	top: 208px;
-    	font-size: 14px;
-    	border-top: 1px solid #fff;
-    	border-bottom: 1px solid #fff;
-    	left: 20px;
-    	width: 168px;
-    	ul{
-    		list-style: none;
-    		li{line-height: 50px;}
-    		li.is-checked{position: relative;}
-    		li.is-checked:after{
-				position: absolute;
-				content: "\f106";
-				font: normal normal normal 14px/1 FontAwesome;
-			    text-rendering: auto;
-    			-webkit-font-smoothing: antialiased;
-    			color: #fff;
-    		}
-    		
-    	}
-	}
+			bottom: 0;
+			background-color: rgba(0, 0, 0, .65);
+			width: 100%;
+			color: rgba(255,255,255,.85);
+			padding: 10px;
+			transform: translateY(40px);
+			transition: All 0.2s ease-in-out;
+			p{margin: 0;}
+	    }
+
+    }
+    figure:hover {
+        -webkit-filter: grayscale(.3);
+        transform: scale(1.02);
+        z-index: 100;
+        .item-info{
+        	transform: translateY(0);
+        }
+    }
+
+
 }
 
-#menu:hover{
-	height: 516px;
-	background-color: @brand-primary;
-	color: #fff;
-	.filter-list{
-		background-color: @brand-primary;
-		color: #fff;
-	}
+.grid-item--width2 {
+    width: 436px;
 }
 
+.grid-item--height2 {
+    height: 436px;
+}
 
-    
+#menu {
+    background-color: rgba(255, 255, 255, .85);
+    border: 1px solid @brand-primary;
+    color: @brand-primary;
+    transition: All 0.2s ease-in-out;
+    //height: 516px;
+    position: relative;
+    // display: flex;
+    // flex-direction: column;
+    overflow: hidden;
+    z-index: 2;
+    .menu-box {
+        width: 208px;
+        height: 208px;
+        position: absolute;
+        -webkit-writing-mode: vertical-rl;
+        font-size: 32px;
+        p {
+            margin: 35px 125px auto 35px;
+        }
+        i {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+        }
+    }
+    //padding-left: 200px;
+    .filter-list {
+        background-color: #fff;
+        color: @brand-primary;
+        position: absolute;
+        top: 208px;
+        font-size: 14px;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        left: 20px;
+        width: 168px;
+        ul {
+            list-style: none;
+            li {
+                line-height: 50px;
+            }
+            li.is-checked {
+                position: relative;
+            }
+            li.is-checked:after {
+                position: absolute;
+                content: "\f106";
+                font: normal normal normal 14px/1 FontAwesome;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                color: #fff;
+            }
+        }
+    }
+}
+
+#menu:hover {
+    height: 516px;
+    background-color: @brand-primary;
+    color: #fff;
+    .filter-list {
+        background-color: @brand-primary;
+        color: #fff;
+    }
+}

@@ -15,13 +15,39 @@
     <div class="sliderContainer">
         <div class="container">
             <div class="logo-box">
+                <div class="logo-box-bg"></div>
+                <div class="logo"></div>
+                <!-- <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="blur">
+                            <feGaussianBlur x="80px" y="100px" width="225px" height="337px" in="SourceGraphic" stdDeviation="10"></feGaussianBlur>
+                        </filter>
+                    </defs>
+                    <g filter="url(#blur)">
+                        <rect x="80px" y="100px" width="225px" height="337px" fill="#F2F3F5"></rect>
+                        <image id="js-sidebar-backimage-svgimage" width="100%" height="80%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../resources/images/book1.jpg"></image>
+                    </g>
+                </svg> -->
             </div>
+
             <div class="slogan-box">
                 <h2>设计创造价值，专业提升品质</h2>
                 <div class="hint-message">
                 </div>
             </div>
         </div>
+        <span class="arrow-left arrow">
+            <i class="left"></i>
+        </span>
+        <div class="slider">
+            <div class="slider_item" style="background-image:url(../resources/images/book1.jpg);"></div>
+            <div class="slider_item" style="background-image:url(../resources/images/book2.jpg);"></div>
+            <div class="slider_item" style="background-image:url(../resources/images/book3.jpg);"></div>
+            <div class="slider_item" style="background-image:url(../resources/images/book4.jpg);"></div>
+        </div>
+        <span class="arrow-right arrow">
+            <i class="right"></i>
+        </span>
     </div>
     <nav id="nav_bar">
         <div class="container">
@@ -39,11 +65,10 @@
                         <div class="rect8"></div>
                         <div class="rect9"></div>
                     </div>
-
                 </li>
                 <li>
-                    <a href="#">项目展示</a>
-                      <div class="spinner">
+                    <a href="content.html">项目展示</a>
+                    <div class="spinner">
                         <div class="rect1"></div>
                         <div class="rect2"></div>
                         <div class="rect3"></div>
@@ -57,7 +82,7 @@
                 </li>
                 <li>
                     <a href="#">关于易和</a>
-                      <div class="spinner">
+                    <div class="spinner">
                         <div class="rect1"></div>
                         <div class="rect2"></div>
                         <div class="rect3"></div>
@@ -81,7 +106,7 @@
                         <div class="rect7"></div>
                         <div class="rect8"></div>
                         <div class="rect9"></div>
-                    </div>      
+                    </div>
                 </li>
                 <li>
                     <a href="#">联系我们</a>
@@ -122,14 +147,13 @@
             <header class="box-header">精彩回顾</header>
             <section>
                 <div class="figure-box">
-                <img src="../resources/images/book3.jpg">
-                   <!--  <figure style="background-image: url(../resources/images/book3.jpg);"></figure> -->
+                    <img src="../resources/images/book3.jpg">
+                    <!--  <figure style="background-image: url(../resources/images/book3.jpg);"></figure> -->
                 </div>
-                
                 <div class="sec-content">
                     <h3>绍兴境地蓝月售楼处</h3>
                     <p>这个是一段介绍文字,这个是一段介绍文字这个是一段介绍文字这个是一段介绍文字这个是一段介绍文字这个是一段介绍文字这个是一段介绍文字这个是一段介绍文字这个是一段介绍文字这个是一段介绍文字这个是一段介绍文字这个是一段介绍文字这个是一段介绍文字</p>
-                    <a href="" class="btn-squre btn-brand">点击了解更多细节<i class="icon-arrow"></i></a>
+                    <a href="detail.html" class="btn-squre btn-brand">点击了解更多细节<i class="icon-arrow"></i></a>
                 </div>
             </section>
             <section>
@@ -163,7 +187,7 @@
                 <p>秉承“设计创造价值，专业提升品质”的设计服务理念，
                     <br>致力于创造高品质的室内空间</p>
                 <a href="" class="btn-squre btn-brand">点击了解更多<i class="icon-arrow"></i></a>
-            </div>    
+            </div>
         </div>
     </div>
     <footer>
@@ -205,18 +229,20 @@
                     <i class="fa fa-tencent-weibo fa-2x"></i>
                     <i class="fa fa-qq fa-2x"></i>
                     <i class="fa fa-wechat fa-2x"></i>
-                </div>    
+                </div>
             </div>
         </div>
     </footer>
     <script src="../resources/js/jquery.min.js"></script>
     <script src="../resources/js/bootstrap.min.js"></script>
-
-    
     <script type="text/javascript">
     $(document).ready(function() {
+        var isAnimated = false;
+        var isHover = false;
         var screenHeight = $(window).height();
         $('.sliderContainer').css('height', screenHeight + 'px');
+        $('.arrow').css('height', screenHeight + 'px');
+        $('.slider').css('height', screenHeight + 'px');
         var _ishit = false;
         $(window).on('scroll', function(e) {
             var scrollTop = $(document).scrollTop();
@@ -230,33 +256,120 @@
                 $('#nav_bar').removeClass('fixed');
 
         });
+
+        var $prepare;
+
+        $('.arrow-left').hover(function() {
+            isHover = true;
+            $prepare = $('.slider_item').last();
+            var width = $('.slider_item').first().width();
+            $prepare
+                .prependTo('.slider')
+                .end()
+                .css({
+                    'position': 'absolute',
+                    'left': '-' + (width - 100) + 'px',
+                    'top': 0,
+                    'bottom': 0,
+                    'z-index': 1000
+                });
+        }, function() {
+            isHover = false;
+            if ($prepare && !isAnimated) {
+                $prepare.css({
+                    'position': 'relative',
+                    'left': '',
+                    'top': '',
+                    'z-index': ''
+                }).appendTo('.slider');
+            }
+        });
+
+        $('.arrow-left').click(function() {
+            isAnimated = true;
+            $prepare.css('left', 0);
+            // $prepare = $('.slider_item').last();
+            $prepare.one('webkitTransitionEnd', function() {
+                isAnimated = false;
+                $prepare
+                    .css({
+                        'position': 'relative',
+                        'z-index': '',
+                        'top': '',
+                        'left': ''
+                    });
+                $prepare = $('.slider_item').last();
+                var width = $('.slider_item').first().width();
+                if (!isHover)
+                    return false;
+                $prepare
+                    .prependTo('.slider')
+                    .end()
+                    .css({
+                        'position': 'absolute',
+                        'left': '-' + (width - 100) + 'px',
+                        'top': 0,
+                        'bottom': 0,
+                        'z-index': 1000
+                    });
+            });
+        });
+
+        $('.arrow-right').hover(function() {
+            $prepare = $('.slider_item').first().next();
+            var width = $('.slider_item').first().width();
+            $prepare
+                .css({
+                    'position': 'absolute',
+                    'left': (width - 100) + 'px',
+                    'top': 0,
+                    'bottom': 0,
+                    'z-index': 1000,
+                    'transition': 'left .3s ease-out'
+                });
+        }, function() {
+            if ($prepare && !isAnimated) {
+                $prepare.css({
+                    'position': 'relative',
+                    'left': '',
+                    'top': '',
+                    'z-index': ''
+                });
+                // $prepare.css('margin-left', 'auto');
+            }
+        });
+        $('.arrow-right').click(function(e) {
+            if (isAnimated) {
+                e.preventDefault();
+                return false;
+            }
+            isAnimated = true;
+            var width = $('.slider_item').first().width();
+            $prepare.css('left', 0);
+            $prepare.one('webkitTransitionEnd', function() {
+                isAnimated = false;
+                $prepare
+                    .css({
+                        'position': 'relative',
+                        'z-index': '',
+                        'top': '',
+                        'left': ''
+                    }).prependTo('.slider');
+                $('.slider_item').first().next().appendTo('.slider');
+                $prepare = $('.slider_item').first().next();
+                var width = $('.slider_item').first().width();
+                $prepare
+                    .css({
+                        'position': 'absolute',
+                        'left': (width - 100) + 'px',
+                        'top': 0,
+                        'bottom': 0,
+                        'z-index': 1000
+                    });
+            });
+        });
     });
-    //$(function() {
-        //var imgLoadNum = 0;
-        //var totalImgLength = $('img').length;
-        // $('#mybook').booklet({
-        //     width: '150%',
-        //     height: screenHeight,
-        //     pagePadding: 0,
-        //     pageNumbers: false,
-        //     shadows: true,
-        //     auto: true,
-        //     speed: 2500
-        // });
-        // var $masonry = $('#grid');
-        // $masonry.imagesLoaded(function () {
-        //     console.log($('#grid').width());
-        //     $masonry.masonry({
-        //       itemSelector: '.item'
-        //       // columnWidth: 200
-        //     });
-        // });
-    //});
     </script>
-    <!--<script src="../resources/js/jquery-ui.min.js"></script>
-    <script src="../resources/js/jquery.easing.min.js"></script>
-    <script src="../resources/js/jquery.booklet.latest.min.js"></script>
-    <script src="../resources/js/imagesloaded.pkgd.min.js"></script>-->
 </body>
 
 </html>
