@@ -1,24 +1,27 @@
 @import "global.less";
 .sliderContainer {
     width: 100%;
+    min-width: 1200px;
     overflow: hidden;
     position: relative;
     //background: #000;
     .container {
         height: 100%;
+        width: 1200px;
+        margin: 0 auto;
         display: flex;
         display: -webkit-flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         flex-direction: column;
-        align-items: space-between;
-        position: absolute;
+        //align-items: space-between;
+        position: relative;
         z-index: 10000;
-        left: 80px;
-        top: 100px;
+        //left: 80px;
         .logo-box {
             position: relative;
             width: 225px;
             height: 337px;
+            margin-top: 60px;
             .logo-box-bg {
                 background-image: url(../images/logo_top.png);
                 background-repeat: no-repeat;
@@ -41,7 +44,12 @@
         }
         .slogan-box {
             color: #fff;
-            margin: 0 auto 150px 0;
+            margin: auto auto 135px 0;
+            h2{
+                background-image: url(../images/slogan.png);
+                width: 577px;
+                height: 51px;
+            }
             .hint-message {
                 height: 50px;
                 background-image: url(../images/Mouse_Icon.png);
@@ -52,7 +60,9 @@
     .slider {
         width: 400%;
         height: 817px;
-        position: relative;
+        position: absolute;
+        top: 0;
+        z-index: 0;
         .slider_item {
             height: 100%;
             width: 25%;
@@ -100,6 +110,13 @@
 
 .review-box {
     .container {
+        width: 1200px;
+        .box-header{
+            background-image: url(../images/review.png);
+            background-repeat: no-repeat;
+            width: 202px;
+            height: 43px;
+        }
         section {
             display: flex;
             display: -webkit-flex;
@@ -159,9 +176,11 @@
         flex-direction: column;
         justify-content: space-between;
         color: #fff;
-        .box-header {
-            color: #fff;
-            border-color: #fff;
+        .box-header{
+            background-image: url(../images/aboutus.png);
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 43px;
             margin-top: 0;
         }
         p {
@@ -196,7 +215,4 @@
 .box-header {
     margin: 55px 0;
     font-size: 32px;
-    border-left: 2px solid #7a6f59;
-    padding-left: 10px;
-    color: #7a6f59;
 }

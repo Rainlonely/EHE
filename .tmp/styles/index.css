@@ -349,28 +349,28 @@ footer .container .conact-box .sns-box i {
 }
 .sliderContainer {
   width: 100%;
+  min-width: 1200px;
   overflow: hidden;
   position: relative;
 }
 .sliderContainer .container {
   height: 100%;
+  width: 1200px;
+  margin: 0 auto;
   display: flex;
   display: -webkit-flex;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
   -webkit-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: space-between;
-  align-items: space-between;
-  position: absolute;
+  position: relative;
   z-index: 10000;
-  left: 80px;
-  top: 100px;
 }
 .sliderContainer .container .logo-box {
   position: relative;
   width: 225px;
   height: 337px;
+  margin-top: 60px;
 }
 .sliderContainer .container .logo-box .logo-box-bg {
   background-image: url(../images/logo_top.png);
@@ -389,7 +389,12 @@ footer .container .conact-box .sns-box i {
 }
 .sliderContainer .container .slogan-box {
   color: #fff;
-  margin: 0 auto 150px 0;
+  margin: auto auto 135px 0;
+}
+.sliderContainer .container .slogan-box h2 {
+  background-image: url(../images/slogan.png);
+  width: 577px;
+  height: 51px;
 }
 .sliderContainer .container .slogan-box .hint-message {
   height: 50px;
@@ -399,7 +404,9 @@ footer .container .conact-box .sns-box i {
 .sliderContainer .slider {
   width: 400%;
   height: 817px;
-  position: relative;
+  position: absolute;
+  top: 0;
+  z-index: 0;
 }
 .sliderContainer .slider .slider_item {
   height: 100%;
@@ -442,6 +449,15 @@ footer .container .conact-box .sns-box i {
     left: 0;
     -webkit-filter: grayscale(0.2);
   }
+}
+.review-box .container {
+  width: 1200px;
+}
+.review-box .container .box-header {
+  background-image: url(../images/review.png);
+  background-repeat: no-repeat;
+  width: 202px;
+  height: 43px;
 }
 .review-box .container section {
   display: flex;
@@ -505,8 +521,10 @@ footer .container .conact-box .sns-box i {
   color: #fff;
 }
 .about-box .container .box-header {
-  color: #fff;
-  border-color: #fff;
+  background-image: url(../images/aboutus.png);
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 43px;
   margin-top: 0;
 }
 .about-box .container p {
@@ -538,7 +556,4 @@ footer .container .conact-box .sns-box i {
 .box-header {
   margin: 55px 0;
   font-size: 32px;
-  border-left: 2px solid #7a6f59;
-  padding-left: 10px;
-  color: #7a6f59;
 }
