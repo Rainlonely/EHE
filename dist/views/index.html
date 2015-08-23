@@ -228,6 +228,7 @@
     $(document).ready(function() {
         var screenHeight = $(window).height();
         $('.sliderContainer').css('height', screenHeight + 'px');
+        $('.slider').css('height',screenHeight + 'px');
         var _ishit = false;
         $(window).on('scroll', function(e) {
             var scrollTop = $(document).scrollTop();
