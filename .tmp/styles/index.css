@@ -378,18 +378,13 @@ footer .container .conact-box .sns-box i {
   background-size: cover;
   width: 225px;
   height: 337px;
-  opacity: .85;
-  -webkit-filter: blur(5px);
   box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.15);
 }
 .sliderContainer .container .logo-box .logo {
-  background-image: url(../images/EHE_logo.svg);
   width: 148px;
   height: 72px;
   bottom: 61px;
   position: absolute;
-  left: 39px;
-  opacity: .3;
 }
 .sliderContainer .container .slogan-box {
   color: #fff;
