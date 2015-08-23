@@ -3,7 +3,8 @@ a:hover {
 }
 nav {
   width: 100%;
-  background: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(255, 255, 255, 0.75)), to(#ffffff));
+  background-image: url(../images/nav_bg.png);
+  background-repeat: repeat-x;
   position: absolute;
   bottom: 0;
   z-index: 10000;
@@ -23,6 +24,7 @@ nav .container ul {
   justify-content: space-around;
   align-items: center;
   height: 100%;
+  z-index: 10000;
 }
 nav .container ul li {
   width: 200px;

@@ -3,7 +3,8 @@ a:hover {
 }
 nav {
   width: 100%;
-  background: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(255, 255, 255, 0.75)), to(#ffffff));
+  background-image: url(../images/nav_bg.png);
+  background-repeat: repeat-x;
   position: absolute;
   bottom: 0;
   z-index: 10000;
@@ -23,6 +24,7 @@ nav .container ul {
   justify-content: space-around;
   align-items: center;
   height: 100%;
+  z-index: 10000;
 }
 nav .container ul li {
   width: 200px;
@@ -443,12 +445,12 @@ footer .container .conact-box .sns-box i {
 }
 .introduce-box .cartoon.description-box:before {
   width: 100%;
-  transition: background-color 0.2s, width 0.5s 0s, height 0.5s 0s;
+  transition: background-color 0.2s, width 0.25s 0s, height 0.25s 0s;
   transition-timing-function: ease-in;
 }
 .introduce-box .cartoon.description-box:after {
   height: 100%;
-  transition: background-color 0.2s, width 0.5s 0.5s, height 0.5s 0.5s;
+  transition: background-color 0.2s, width 0.25s 0.25s, height 0.25s 0.25s;
   transition-timing-function: linear;
 }
 .introduce-box .cartoon {
@@ -465,12 +467,12 @@ footer .container .conact-box .sns-box i {
 }
 .introduce-box .cartoon .border-box:before {
   width: 100%;
-  transition: background-color 0.2s, width 0.5s 1s, height 0.5s 1s;
+  transition: background-color 0.2s, width 0.25s 0.5s, height 0.25s 0.5s;
   transition-timing-function: linear;
 }
 .introduce-box .cartoon .border-box:after {
   height: 100%;
-  transition: background-color 0.2s, width 0.5s 1.5s, height 0.5s 1.5s;
+  transition: background-color 0.2s, width 0.25s 0.75s, height 0.25s 0.75s;
   transition-timing-function: ease-out;
 }
 .introduce-box .btn-squre-prev {
