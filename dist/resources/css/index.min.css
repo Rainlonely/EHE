@@ -378,6 +378,7 @@ footer .container .conact-box .sns-box i {
   background-size: cover;
   width: 225px;
   height: 337px;
+  opacity: .85;
   box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.15);
 }
 .sliderContainer .container .logo-box .logo {
@@ -388,56 +389,12 @@ footer .container .conact-box .sns-box i {
 }
 .sliderContainer .container .slogan-box {
   color: #fff;
-  margin: 0 auto 150px 50px;
+  margin: 0 auto 150px 0;
 }
 .sliderContainer .container .slogan-box .hint-message {
   height: 50px;
   background-image: url(../images/Mouse_Icon.png);
   background-repeat: no-repeat;
-}
-.sliderContainer .arrow {
-  z-index: 10000;
-  text-align: center;
-  height: 565px;
-  display: block;
-  top: 0;
-  width: 100px;
-  position: absolute;
-  opacity: 0;
-  transition: opacity 0.3s ease-out;
-}
-.sliderContainer .arrow i {
-  transition: -webkit-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
-  width: 28px;
-  height: 22px;
-  background-image: url('../images/gallery-arrow.svg');
-  background-repeat: no-repeat;
-  top: 45%;
-  display: block;
-  position: absolute;
-}
-.sliderContainer .arrow .left {
-  -webkit-transform: rotate(180deg);
-  left: 10px;
-}
-.sliderContainer .arrow .right {
-  right: 10px;
-}
-.sliderContainer .arrow-left {
-  left: 0;
-}
-.sliderContainer .arrow-right {
-  right: 0;
-}
-.sliderContainer .arrow:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 1;
-  cursor: pointer;
-}
-.sliderContainer .arrow:hover .right {
-  -webkit-transform: translateX(-20px);
-  transform: translateX(-20px);
 }
 .sliderContainer .slider {
   width: 400%;
@@ -458,6 +415,7 @@ footer .container .conact-box .sns-box i {
   -webkit-animation-delay: 1.5s;
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
+  box-shadow: -1px 1px 3px #000000;
 }
 .sliderContainer .slider .slider_item.second {
   -webkit-animation: amt2 1s ease-in-out forwards;
@@ -499,9 +457,10 @@ footer .container .conact-box .sns-box i {
   position: relative;
 }
 .review-box .container section .figure-box img {
-  width: 102%;
+  width: 120%;
   position: absolute;
   top: -20%;
+  left: -10%;
   -webkit-filter: grayscale(0.7);
   transition: All 0.4s ease-in-out;
 }

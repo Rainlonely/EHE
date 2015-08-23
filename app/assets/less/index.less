@@ -25,7 +25,7 @@
                 background-size: cover;
                 width: 225px;
                 height: 337px;
-                //opacity: .85;
+                opacity: .85;
                 //-webkit-filter: blur(5px);
                 box-shadow: 0 0 1.5rem rgba(0, 0, 0, .15);
             }
@@ -41,58 +41,12 @@
         }
         .slogan-box {
             color: #fff;
-            margin: 0 auto 150px 50px;
+            margin: 0 auto 150px 0;
             .hint-message {
                 height: 50px;
                 background-image: url(../images/Mouse_Icon.png);
                 background-repeat: no-repeat;
             }
-        }
-        // nav {z-index: 1200;}
-    }
-    .arrow {
-        z-index: 10000;
-        text-align: center;
-        height: 565px;
-        display: block;
-        top: 0;
-        width: 100px;
-        position: absolute;
-        opacity: 0;
-        transition: opacity .3s ease-out;
-        i {
-            -webkit-transition: -webkit-transform .3s ease-out;
-            transition: transform .3s ease-out;
-            width: 28px;
-            height: 22px;
-            background-image: url('../images/gallery-arrow.svg');
-            background-repeat: no-repeat;
-            top: 45%;
-            display: block;
-            position: absolute;
-        }
-        .left {
-            -webkit-transform: rotate(180deg);
-            left: 10px;
-        }
-        .right {
-            right: 10px;
-        }
-    }
-    .arrow-left {
-        left: 0;
-    }
-    .arrow-right {
-        right: 0;
-    }
-    .arrow:hover {
-        background-color: rgba(0, 0, 0, 0.5);
-        opacity: 1;
-        cursor: pointer;
-        .right {
-            -webkit-transform: translateX(-20px);
-            -ms-transform: translateX(-20px);
-            transform: translateX(-20px);
         }
     }
     .slider {
@@ -113,6 +67,7 @@
             -webkit-animation-delay: 1.5s;
             -webkit-filter: grayscale(1);
             filter: grayscale(1);
+            box-shadow: -1px 1px 3px #000;
         }
         .slider_item.second {
             -webkit-animation: amt2 1s ease-in-out forwards;
@@ -156,9 +111,10 @@
                 overflow: hidden;
                 position: relative;
                 img {
-                    width: 102%;
+                    width: 120%;
                     position: absolute;
                     top: -20%;
+                    left: -10%;
                     -webkit-filter: grayscale(0.7);
                     transition: All 0.4s ease-in-out;
                 }
