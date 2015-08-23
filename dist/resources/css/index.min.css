@@ -445,11 +445,7 @@ footer .container .conact-box .sns-box i {
   transform: translateX(-20px);
 }
 .sliderContainer .slider {
-  /*test*/
-  /*margin-left: -100%;*/
-  /*-----*/
   width: 400%;
-  /*position:absolute;left:0; right:0;top: 0;*/
   height: 817px;
   position: relative;
 }
@@ -457,13 +453,42 @@ footer .container .conact-box .sns-box i {
   height: 100%;
   width: 25%;
   background-size: cover;
-  -webkit-transition: all 1s ease-in-out;
-  -webkit-filter: grayscale(100%);
   background-position: center;
   display: inline-block;
+  position: absolute;
+  left: 25%;
+}
+.sliderContainer .slider .slider_item.currentAmt {
+  -webkit-animation: amt 0.5s ease-in forwards;
+  -webkit-animation-delay: 1.5s;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+.sliderContainer .slider .slider_item.second {
+  -webkit-animation: amt2 1s ease-in-out forwards;
+  -webkit-animation-delay: 1.5s;
 }
 .sliderContainer .slider .slider_item:first-child {
-  -webkit-filter: grayscale(0);
+  left: 0;
+  position: relative;
+}
+@-webkit-keyframes amt {
+  from {
+    left: 25%;
+  }
+  to {
+    left: 20.5%;
+  }
+}
+@-webkit-keyframes amt2 {
+  from {
+    left: 20.5%;
+    -webkit-filter: grayscale(1);
+  }
+  to {
+    left: 0;
+    -webkit-filter: grayscale(0.2);
+  }
 }
 .review-box .container section {
   display: flex;
