@@ -1,13 +1,15 @@
 @import "variables.less";
-a:hover{text-decoration: none;}
+a:hover {
+    text-decoration: none;
+}
 nav {
     width: 100%;
-    background-color: #fff;
+    background-image: url(../images/nav_bg.png);
+    background-repeat: repeat-x;
     position: absolute;
     bottom: 0;
     z-index: 10000;
     border-bottom: 1px solid #7a6f59;
-    
     .container {
         overflow: hidden;
         width: 1200px;
@@ -16,10 +18,12 @@ nav {
         ul {
             padding: 0;
             margin: 0;
-            display: flex; display: -webkit-flex;
+            display: flex;
+            display: -webkit-flex;
             justify-content: space-around;
             align-items: center;
             height: 100%;
+            z-index: 10000;
             li {
                 width: 200px;
                 list-style: none;
@@ -27,7 +31,8 @@ nav {
                 text-align: center;
                 height: 100%;
                 color: #606060;
-                display: flex; display: -webkit-flex;
+                display: flex;
+                display: -webkit-flex;
                 align-items: center;
                 flex-direction: column;
                 justify-content: space-between;
@@ -38,12 +43,13 @@ nav {
                     text-decoration: none;
                     color: #606060;
                     margin-top: 40px;
-                    display: flex; display: -webkit-flex;
+                    display: flex;
+                    display: -webkit-flex;
                     justify-content: flex-start;
                 }
                 .icon-global {
-                	background-image: url(../images/English.png);
-                	background-repeat: no-repeat;
+                    background-image: url(../images/English.png);
+                    background-repeat: no-repeat;
                     margin-right: 10px;
                     margin-top: -5px;
                     width: 26px;
@@ -61,7 +67,6 @@ nav {
                     -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
                     animation: stretchdelay 1.2s infinite ease-in-out;
                 }
-                
                 .spinner .rect2 {
                     -webkit-animation-delay: -1.1s;
                     animation-delay: -1.1s;
@@ -121,21 +126,23 @@ nav {
                     }
                 }
             }
-            li:hover { 
-            	a {
+            li:hover {
+                a {
                     color: #7a6f59;
                     font-size: 16px;
                 }
-            	.spinner div{
+                .spinner div {
                     opacity: 1;
                 }
             }
             li:nth-last-child(1) {
-		        border-left: 1px solid #7a6f59;
-		        padding-left: 65px;
-		        height: 50%;
-		        a{margin-top: 15px;} 
-		    }
+                border-left: 1px solid #7a6f59;
+                padding-left: 65px;
+                height: 50%;
+                a {
+                    margin-top: 15px;
+                }
+            }
         }
     }
 }
@@ -191,76 +198,92 @@ nav.fixed {
     }
 }
 
-.btn-back{
-	position: relative;
-	width: 80px;
-	height: 80px;
+.btn-back {
+    position: relative;
+    width: 80px;
+    height: 80px;
 }
-.btn-back:before,.btn-back:after{
-	content: "";
-	position: absolute;
-	border-top: 1px solid #7e755e;
-	width: 100%;
+
+.btn-back:before,
+.btn-back:after {
+    content: "";
+    position: absolute;
+    border-top: 1px solid #7e755e;
+    width: 100%;
 }
-.btn-back:before{
-	transform: rotate(45deg);
+
+.btn-back:before {
+    transform: rotate(45deg);
 }
-.btn-back:after{
-	transform: rotate(-45deg);
+
+.btn-back:after {
+    transform: rotate(-45deg);
 }
-.btn-squre-prev, .btn-squre-next{
-	border: 1px solid #7e755e;
-	width: 150px;
-	height: 150px;
-	color: #7e755e;
-	position: relative;
-	font-size: 16px;
+
+.btn-squre-prev,
+.btn-squre-next {
+    border: 1px solid #7e755e;
+    width: 150px;
+    height: 150px;
+    color: #7e755e;
+    position: relative;
+    font-size: 16px;
 }
-.btn-squre-prev{
-	text-align: right;
-	padding: 10px 25px 0 65px;
+
+.btn-squre-prev {
+    text-align: right;
+    padding: 10px 25px 0 65px;
 }
-.btn-squre-next{
-	text-align: left;
-	padding: 10px 65px 0 25px;
+
+.btn-squre-next {
+    text-align: left;
+    padding: 10px 65px 0 25px;
 }
+
 .btn-squre-prev:before,
-.btn-squre-next:before{
-	content: "";
-	position: absolute;
-	width: 30px;
-	height: 30px;
-	border-top: 1px solid #7e755e;
-	border-left: 1px solid #7e755e;
-	bottom: 20px;
+.btn-squre-next:before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-top: 1px solid #7e755e;
+    border-left: 1px solid #7e755e;
+    bottom: 20px;
 }
+
 .btn-squre-prev:after,
-.btn-squre-next:after{
-	content: "";
-	position: absolute;
-	width: 43px;
-	border-top:1px solid #7e755e;
-	bottom: 34px;
+.btn-squre-next:after {
+    content: "";
+    position: absolute;
+    width: 43px;
+    border-top: 1px solid #7e755e;
+    bottom: 34px;
 }
-.btn-squre-prev:before{
-	left: 20px;
-	transform: rotate(-45deg);
+
+.btn-squre-prev:before {
+    left: 20px;
+    transform: rotate(-45deg);
 }
-.btn-squre-next:before{
-	right: 20px;
-	transform: rotate(135deg);
+
+.btn-squre-next:before {
+    right: 20px;
+    transform: rotate(135deg);
 }
-.btn-squre-prev:after{
-	left: 14px;
+
+.btn-squre-prev:after {
+    left: 14px;
 }
-.btn-squre-next:after{
-	right: 14px;
+
+.btn-squre-next:after {
+    right: 14px;
 }
+
 footer {
     background-color: #7a6f59;
     height: 250px;
     .container {
-        display: flex; display: -webkit-flex;
+        display: flex;
+        display: -webkit-flex;
         justify-content: flex-start;
         color: rgba(255, 255, 255, .85);
         a {
@@ -274,7 +297,8 @@ footer {
             background-image: url(../images/logo_footer.jpg);
             background-repeat: no-repeat;
             background-position: center 30%;
-            display: flex; display: -webkit-flex;
+            display: flex;
+            display: -webkit-flex;
             justify-content: center;
             align-items: flex-end;
             border-right: 2px solid #fff;
@@ -283,14 +307,16 @@ footer {
             }
         }
         .map-box {
-            display: flex; display: -webkit-flex;
+            display: flex;
+            display: -webkit-flex;
             flex-direction: column;
             justify-content: space-between;
             margin: 50px 0 auto 60px;
             height: 170px;
             .site-map {
                 width: 470px;
-                display: flex; display: -webkit-flex;
+                display: flex;
+                display: -webkit-flex;
                 justify-content: space-between;
                 ul {
                     list-style: none;
@@ -299,7 +325,8 @@ footer {
             }
         }
         .conact-box {
-            display: flex; display: -webkit-flex;
+            display: flex;
+            display: -webkit-flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: flex-end;

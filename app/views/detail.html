@@ -4,9 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <title>项目展示</title>
-    <link rel="stylesheet" type="text/css" href="../resources/css/jquery.min.css">
     <link rel="stylesheet" type="text/css" href="../resources/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../resources/css/fontawesome.min.css">
     <link rel="stylesheet" type="text/css" href="../resources/css/detail.min.css">
 </head>
 
@@ -15,7 +13,7 @@
         <div class="container">
             <ul>
                 <li>
-                    <a href="#">首页</a>
+                    <a href="index.html">首页</a>
                     <div class="spinner">
                         <div class="rect1"></div>
                         <div class="rect2"></div>
@@ -29,7 +27,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#">项目展示</a>
+                    <a href="content.html">项目展示</a>
                     <div class="spinner">
                         <div class="rect1"></div>
                         <div class="rect2"></div>
@@ -137,12 +135,16 @@
     </div>
     <script src="../resources/js/jquery.min.js"></script>
     <script src="../resources/js/bootstrap.min.js"></script>
-    <script src="../resources/js/isotope.pkgd.min.js"></script>
     <script>
     $(document).ready(function(){
-        $('.btn-back').click(function(){
-            $('.description-box').addClass('cartoon');    
-        })
+        setTimeout('addAnimation()', 1000);
+        //$('.description-box').addClass('cartoon');
+        addAnimation = function(){
+            $('.description-box').addClass('cartoon');
+        }
+        // $('.btn-back').click(function(){
+        //     $('.description-box').addClass('cartoon');    
+        // })
         
     });
     </script>
