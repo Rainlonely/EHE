@@ -21,7 +21,9 @@ nav .container ul {
   margin: 0;
   display: flex;
   display: -webkit-flex;
+  -webkit-justify-content: space-around;
   justify-content: space-around;
+  -webkit-align-items: center;
   align-items: center;
   height: 100%;
   z-index: 10000;
@@ -35,8 +37,11 @@ nav .container ul li {
   color: #606060;
   display: flex;
   display: -webkit-flex;
+  -webkit-align-items: center;
   align-items: center;
   flex-direction: column;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
   position: relative;
 }
@@ -49,6 +54,7 @@ nav .container ul li a {
   display: flex;
   display: -webkit-flex;
   justify-content: flex-start;
+  -webkit-justify-content: flex-start;
 }
 nav .container ul li .icon-global {
   background-image: url(../images/English.png);
@@ -179,6 +185,7 @@ nav.fixed {
   width: 32px;
   height: 1px;
   background-color: #7a6f59;
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   display: block;
   bottom: 10px;
@@ -208,9 +215,11 @@ nav.fixed {
   width: 100%;
 }
 .btn-back:before {
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 .btn-back:after {
+  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 .btn-squre-prev,
@@ -250,10 +259,12 @@ nav.fixed {
 }
 .btn-squre-prev:before {
   left: 20px;
+  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 .btn-squre-next:before {
   right: 20px;
+  -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 .btn-squre-prev:after {
@@ -270,6 +281,7 @@ footer .container {
   display: flex;
   display: -webkit-flex;
   justify-content: flex-start;
+  -webkit-justify-content: flex-start;
   color: rgba(255, 255, 255, 0.85);
 }
 footer .container a {
@@ -285,7 +297,9 @@ footer .container .logo-box {
   background-position: center 30%;
   display: flex;
   display: -webkit-flex;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-align-items: flex-end;
   align-items: flex-end;
   border-right: 2px solid #fff;
 }
@@ -296,6 +310,8 @@ footer .container .map-box {
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
   margin: 50px 0 auto 60px;
   height: 170px;
@@ -304,6 +320,7 @@ footer .container .map-box .site-map {
   width: 470px;
   display: flex;
   display: -webkit-flex;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
 }
 footer .container .map-box .site-map ul {
@@ -314,7 +331,10 @@ footer .container .conact-box {
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
+  -webkit-align-items: flex-end;
   align-items: flex-end;
   margin: 50px 0 auto auto;
   height: 160px;
@@ -330,7 +350,9 @@ footer .container .conact-box .sns-box i {
   margin-left: 20px;
 }
 .content {
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: flex-end;
   justify-content: flex-end;
   position: relative;
 }
@@ -339,8 +361,11 @@ footer .container .conact-box .sns-box i {
 }
 .image-box .header {
   height: 200px;
+  display: -webkit-flex;
   display: flex;
   justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  -webkit-align-items: flex-end;
   align-items: flex-end;
   position: relative;
 }
@@ -367,9 +392,13 @@ footer .container .conact-box .sns-box i {
   position: absolute;
   left: 0;
   top: 150px;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  -webkit-align-content: space-between;
   align-content: space-between;
   width: 400px;
 }
@@ -382,9 +411,12 @@ footer .container .conact-box .sns-box i {
   height: 650px;
   background-color: rgba(255, 255, 255, 0);
   padding: 40px;
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
   flex-direction: column;
+  -webkit-flex-direction: column;
 }
 .introduce-box .description-box .border-box .btn-back {
   top: 40px;

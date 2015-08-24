@@ -358,7 +358,7 @@ module.exports = function (grunt) {
         'clean:dist',
         'concurrent:dist',
         'less',
-        //'autoprefixer',
+        'autoprefixer',
         'copy:dist',
         'copy:html',
         'copy:js',
