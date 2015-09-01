@@ -349,3 +349,144 @@ footer .container .conact-box .sns-box i {
   color: rgba(255, 255, 255, 0.85);
   margin-left: 20px;
 }
+.modal {
+  background-color: rgba(122, 111, 89, 0.95);
+}
+.modal .modal-dialog {
+  margin: 0 auto;
+  width: 1200px;
+  height: 100%;
+}
+.modal .modal-dialog .modal-content {
+  box-shadow: none;
+  border: 0;
+  height: 100%;
+  background-color: transparent;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.modal .modal-dialog .modal-content .modal-header {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+  border: 0;
+  padding: 0;
+}
+.modal .modal-dialog .modal-content .modal-header .logo {
+  width: 220px;
+  height: 180px;
+  background-color: #fff;
+  background-image: url(../images/home_logo.png);
+  background-repeat: no-repeat;
+  background-position: center 70px;
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.15);
+}
+.modal .modal-dialog .modal-content .modal-header .control-header {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  width: 260px;
+}
+.modal .modal-dialog .modal-content .modal-header .control-header a {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  height: 26px;
+  width: 100px;
+  color: #fff;
+  line-height: 26px;
+  font-size: 16px;
+}
+.modal .modal-dialog .modal-content .modal-header .control-header a .icon-global {
+  background-image: url(../images/English.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+}
+.modal .modal-dialog .modal-content .modal-header .control-header .close {
+  margin-top: auto;
+  font-size: 22px;
+  font-weight: 200;
+  color: #fff;
+  opacity: 1;
+}
+.modal .modal-dialog .modal-content .modal-header .control-header .close span {
+  display: inline-block;
+  position: relative;
+}
+.modal .modal-dialog .modal-content .modal-header .control-header .close span:before,
+.modal .modal-dialog .modal-content .modal-header .control-header .close span:after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  background-color: #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -10px;
+}
+.modal .modal-dialog .modal-content .modal-header .control-header .close span:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.modal .modal-dialog .modal-content .modal-body {
+  padding: 0;
+}
+.modal .modal-dialog .modal-content .modal-body ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.modal .modal-dialog .modal-content .modal-body ul li {
+  position: relative;
+  width: 202px;
+  height: 600px;
+  bottom: -150px;
+  text-align: center;
+  padding-top: 50px;
+  background-size: 182px 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-filter: sepia(0.3);
+  transition: all 0.3s ease-in;
+}
+.modal .modal-dialog .modal-content .modal-body ul li a {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 20px;
+}
+.modal .modal-dialog .modal-content .modal-body ul li:hover {
+  -webkit-filter: sepia(0);
+  background-size: 202px 600px;
+  bottom: -50px;
+}
+.modal .modal-dialog .modal-content .modal-body ul li:nth-child(1) {
+  background-image: url(../images/nav01.jpg);
+}
+.modal .modal-dialog .modal-content .modal-body ul li:nth-child(2) {
+  background-image: url(../images/nav02.jpg);
+}
+.modal .modal-dialog .modal-content .modal-body ul li:nth-child(3) {
+  background-image: url(../images/nav03.jpg);
+}
+.modal .modal-dialog .modal-content .modal-body ul li:nth-child(4) {
+  background-image: url(../images/nav04.jpg);
+}
+.modal .modal-dialog .modal-content .modal-body ul li:nth-child(5) {
+  background-image: url(../images/nav05.jpg);
+}

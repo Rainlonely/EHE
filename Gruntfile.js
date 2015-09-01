@@ -215,6 +215,12 @@ module.exports = function (grunt) {
                     },
                     {
                         expand: true,
+                        cwd: 'bower_components/jcarousel/dist',
+                        src: ['jquery.jcarousel.js'],
+                        dest: '<%= web.dist %>/resources/js'
+                    },
+                    {
+                        expand: true,
                         cwd: 'app/assets/css',
                         src: ['jquery.slider.css'],
                         dest: '<%= web.dist %>/resources/css'

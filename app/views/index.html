@@ -12,20 +12,14 @@
 <body>
     <div class="sliderContainer">
         <div class="container">
+            <div class="nav-menu">
+                <button type="button" data-toggle="modal" data-target="#navModal"></button>
+            </div>
             <div class="logo-box">
-                <div class="logo-box-bg"></div>
+                <div class="express-link">
+                    <a href="content.html" title="项目展示">前往项目展示</a>
+                </div>
                 <div class="logo"></div>
-                <!-- <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <filter id="blur">
-                            <feGaussianBlur x="80px" y="100px" width="225px" height="337px" in="SourceGraphic" stdDeviation="10"></feGaussianBlur>
-                        </filter>
-                    </defs>
-                    <g filter="url(#blur)">
-                        <rect x="80px" y="100px" width="225px" height="337px" fill="#F2F3F5"></rect>
-                        <image id="js-sidebar-backimage-svgimage" width="100%" height="80%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../resources/images/book1.jpg"></image>
-                    </g>
-                </svg> -->
             </div>
             <div class="slogan-box">
                 <h2></h2>
@@ -40,7 +34,7 @@
             <div class="slider_item " style="background-image:url(../resources/images/book4.jpg);"></div>
         </div>
     </div>
-    <nav id="nav_bar">
+    <!-- <nav id="nav_bar">
         <div class="container">
             <ul>
                 <li>
@@ -132,7 +126,53 @@
                 </li>
             </ul>
         </div>
-    </nav>
+    </nav> -->
+    <div class="slide-box">
+        <div class="jcarousel">
+            <ul>
+                <li>
+                    <figure style="background-image:url(../resources/images/ss1.png)">
+                        <div class="border"></div>
+                        <div class="project-content">
+                            <h3>绍兴金地蘭悦售楼处</h3>
+                            <p>灵水薇兰，跃动绍兴！以兰为主题，运用传统绢画的表现形式，加以现代的工艺，配合古铜、灰色理石等材质的烘托，力求表现出灵动雅致，又不失贵气的销售空间，给客户全新的购房体验。</p>
+                            <a href="detail.html" title="">了解更多细节</a>
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure style="background-image:url(../resources/images/ss2.png)"></figure>
+                </li>
+                <li>
+                    <figure style="background-image:url(../resources/images/ss1.png)"></figure>
+                </li>
+                <li>
+                    <figure style="background-image:url(../resources/images/ss2.png)"></figure>
+                </li>
+                <li>
+                    <figure style="background-image:url(../resources/images/ss1.png)"></figure>
+                </li>
+                <li>
+                    <figure style="background-image:url(../resources/images/ss2.png)"></figure>
+                </li>
+                <li>
+                    <figure style="background-image:url(../resources/images/ss1.png)"></figure>
+                </li>
+                <li>
+                    <figure style="background-image:url(../resources/images/ss2.png)"></figure>
+                </li>
+            </ul>
+        </div>
+        <a href="#" class="jcarousel-control-prev" data-jcarouselcontrol="true">‹</a>
+        <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true">›</a>
+        <div class="jcarousel-pagination" data-jcarouselpagination="true">
+            <div>
+                <a href="#1" class="">1</a>
+                <a href="#2">2</a>
+                <a href="#3" class="active">3</a>
+            </div>
+        </div>
+    </div>
     <div class="review-box">
         <div class="container">
             <header class="box-header"></header>
@@ -166,6 +206,15 @@
                     <a href="" class="btn-squre btn-brand">点击了解更多细节<i class="icon-arrow"></i></a>
                 </div>
             </section>
+        </div>
+    </div>
+    <div class="team-box container">
+        <h2>我们摘星揽月，<br>用实力证明一切！</h2>
+        <div class="award-box">
+            <img src="../resources/images/iF.png" alt="">
+            <img src="../resources/images/Jintang.png" alt="">
+            <img src="../resources/images/ring.png" alt="">
+            <a href="#" class="btn-squre btn-brand">点击了解更多细节<i class="icon-arrow"></i></a>
         </div>
     </div>
     <div class="about-box">
@@ -221,14 +270,40 @@
             </div>
         </div>
     </footer>
+    <!-- Large modal -->
+    <div class="modal fade" tabindex="-1" id="navModal" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="logo">
+                    </div>
+                    <div class="control-header">
+                        <a href=""><i class="icon-global"></i>English</a>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">CLOSE
+                            <span aria-hidden="true"></span></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li><a href="" title="">精彩回顾</a></li>
+                        <li><a href="" title="">关于易和</a></li>
+                        <li><a href="" title="">易和咨询</a></li>
+                        <li><a href="" title="">联系我们</a></li>
+                        <li><a href="" title="">相关链接</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="../resources/js/jquery.min.js"></script>
     <script src="../resources/js/bootstrap.min.js"></script>
+    <script src="../resources/js/jquery.jcarousel.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
         var screenHeight = $(window).height();
         $('.sliderContainer').css('height', screenHeight + 'px');
-        $('.slider').css('height',screenHeight + 'px');
-        var _ishit = false;
+        $('.slider').css('height', screenHeight + 'px');
+        /* var _ishit = false;
         $(window).on('scroll', function(e) {
             var scrollTop = $(document).scrollTop();
             var navHeight = $('#nav_bar').height();
@@ -241,6 +316,49 @@
                 $('#nav_bar').removeClass('fixed');
 
         });
+*/
+
+        $('.jcarousel').jcarousel({});
+        $('.jcarousel-pagination')
+            .on('jcarouselpagination:active', 'a', function() {
+                $(this).addClass('active');
+            })
+            .on('jcarouselpagination:inactive', 'a', function() {
+                $(this).removeClass('active');
+            })
+            .jcarouselPagination({
+                // Options go here
+            });
+        /*
+         Prev control initialization
+         */
+        $('.jcarousel-control-prev')
+            .on('jcarouselcontrol:active', function() {
+                $(this).removeClass('inactive');
+            })
+            .on('jcarouselcontrol:inactive', function() {
+                $(this).addClass('inactive');
+            })
+            .jcarouselControl({
+                // Options go here
+                target: '-=1'
+            });
+
+        /*
+         Next control initialization
+         */
+        $('.jcarousel-control-next')
+            .on('jcarouselcontrol:active', function() {
+                $(this).removeClass('inactive');
+            })
+            .on('jcarouselcontrol:inactive', function() {
+                $(this).addClass('inactive');
+            })
+            .jcarouselControl({
+                // Options go here
+                target: '+=1'
+            });
+
 
         var times = 0;
         $('.slider_item').on('animationend', function() {

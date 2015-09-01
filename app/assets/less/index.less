@@ -5,52 +5,89 @@
     overflow: hidden;
     position: relative;
     //background: #000;
+    .nav-menu {
+        position: absolute;
+        z-index: 10;
+        top: 50px;
+        right: 10%;
+        button {
+            width: 122px;
+            height: 35px;
+            background-image: url('../images/MENU.png');
+            appearance: none;
+            border: 0;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
     .container {
         height: 100%;
         width: 1200px;
         margin: 0 auto;
-        display: flex;display: -webkit-flex;
-        justify-content: flex-start; -webkit-justify-content: flex-start;
-        flex-direction: column; -webkit-flex-direction: column;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: flex-start;
+        -webkit-justify-content: flex-start;
+        flex-direction: column;
+        -webkit-flex-direction: column;
         //align-items: space-between;
         position: relative;
-        z-index: 10000;
+        z-index: 1;
         //left: 80px;
         .logo-box {
-            position: relative;
-            width: 225px;
-            height: 337px;
-
-            margin-top: 60px;
-            .logo-box-bg {
-                background-image: url(../images/logo_top.png);
+            position: absolute;
+            top: -200px;
+            transition: top .5s ease-in-out;
+            .express-link {
+                background-color: #827A66;
+                background-image: url(../images/right_arrow.png);
                 background-repeat: no-repeat;
-                background-size: cover;
-                width: 225px;
-                height: 337px;
-                opacity: .85;
-                box-shadow: 0 0 1.5rem rgba(0, 0, 0, .15);
+                background-position: center 50px;
+                opacity: .8;
+                width: 220px;
+                height: 200px;
+                position: relative;
+                a {
+                    width: 220px;
+                    height: 200px;
+                    position: absolute;
+                    display: block;
+                    color: #fff;
+                    background-image: url(../images/express-link.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    text-indent: -9999px;
+                    //font-size: 22px;
+                    //text-align: center;
+                    //line-height: 270px;
+                    opacity: 1;
+                }
             }
             .logo {
-                //background-image: url(../images/EHE_logo.svg);
-                width: 148px;
-                height: 72px;
-                bottom: 61px;
-                position: absolute;
-                //left: 39px;
-                //opacity: .3;
+                width: 220px;
+                height: 180px;
+                background-color: #fff;
+                background-image: url(../images/home_logo.png);
+                background-repeat: no-repeat;
+                background-position: center 70px;
+                box-shadow: 0 0 1.5rem rgba(0, 0, 0, .15);
             }
+        }
+        .logo-box:hover {
+            top: 0;
         }
         .slogan-box {
             color: #fff;
-            margin: auto auto 135px 0;
-            h2{
+            margin: auto auto 50px 0;
+            h2 {
                 background-image: url(../images/slogan.png);
-                width: 577px;
-                height: 51px;
+                width: 433px;
+                height: 146px;
+                margin-bottom: 100px;
             }
             .hint-message {
-                height: 50px;
+                width: 168px;
+                height: 36px;
                 background-image: url(../images/Mouse_Icon.png);
                 background-repeat: no-repeat;
             }
@@ -107,10 +144,117 @@
     }
 }
 
+.slide-box {
+    margin-top: 90px;
+    position: relative;
+    .jcarousel {
+        position: relative;
+        overflow: hidden;
+        ul {
+            width: 20000em;
+            position: relative;
+            /* Optional, required in this case since it's a <ul> element */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                /* Required only for block elements like <li>'s */
+                float: left;
+                figure {
+                    width: 560px;
+                    height: 621px;
+                    margin-right: 20px;
+                    float: left;
+                    position: relative;
+
+                    .project-content{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 80px 115px;
+                        text-align: center;
+                        color: #fff;
+                        background-color: rgba(122,111,89,.8);
+                        opacity: 0;
+                        transition: opacity 0.3s ease-in-out;
+                        h3{font-size: 22px;}
+                        p{font-size: 12px;}
+                        a{
+                            font-size: 16px;
+                            color: #fff;
+                            border: 1px solid #fff;
+                            display: block;
+                            width: 250px;
+                            padding: 10px 0;
+                            z-index: 2;
+                        }
+                    }
+
+                }
+                .border{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid #fff;
+                    transition: transform 0.3s ease-in-out;
+                    z-index: 1;
+                }
+                figure:hover{
+                    .project-content{
+                        opacity: 1;
+                    }
+                    .border{
+                        transform: scale(.9);
+                    }
+                }
+            }
+            li:nth-child(1){
+                margin-left: 50px;
+            }
+        }
+    }
+    .jcarousel-control-prev,
+    .jcarousel-control-next{
+        position: absolute;
+        top: 40%;
+        left: 20px;
+        color: #fff;
+        font-size: 60px;
+        text-decoration: none;
+        opacity: .85;
+    }
+    .jcarousel-control-next{
+        right: 20px;
+        left: auto;
+    }
+    .jcarousel-pagination{
+        width: 240px;
+        margin: 50px auto;
+        a{
+            display: inline-block;
+            background-color: #d0d0d0;
+            height: 2px;
+            width: 40px;
+            text-indent: -9999px;
+            margin-right: 10px;
+            border: 2px solid transparent;
+        }
+        a.active{
+            background-color: #7A6F59;
+            border: 2px solid #7A6F59;
+        }
+        
+    }
+}
+
 .review-box {
     .container {
         width: 1200px;
-        .box-header{
+        .box-header {
             background-image: url(../images/review.png);
             background-repeat: no-repeat;
             width: 202px;
@@ -148,7 +292,8 @@
                 color: #7a6f59;
                 display: flex;
                 display: -webkit-flex;
-                flex-direction: column; -webkit-flex-direction: column;
+                flex-direction: column;
+                -webkit-flex-direction: column;
                 justify-content: space-between;
                 h3 {
                     font-weight: 100;
@@ -156,6 +301,31 @@
                 }
             }
         }
+    }
+}
+
+.team-box {
+    background-color: #d6d5da;
+    background-image: url(../images/team.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    width: 1200px;
+    height: 1000px;
+    padding: 80px 100px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 90px;
+    h2 {
+        font-size: 60px;
+        color: #7A6F59;
+    }
+    .award-box {
+        display: flex;
+        margin-top: 38px;
+        img {
+            margin-right: 30px;
+        }
+        //.btn-brand{background-color: transparent;}
     }
 }
 
@@ -174,12 +344,13 @@
         height: 720px;
         display: flex;
         display: -webkit-flex;
-        flex-direction: column; -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-direction: column;
         justify-content: space-between;
         color: #fff;
-        .box-header{
+        .box-header {
             background-image: url(../images/aboutus.png);
-            background-repeat: no-repeat;
+            background-repat: no-repeat;
             width: 200px;
             height: 43px;
             margin-top: 0;
